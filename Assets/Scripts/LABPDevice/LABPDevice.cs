@@ -54,6 +54,11 @@ public class LABPDevice : MonoBehaviour
         currentState?.FixedUpdateState();
     }
 
+    private void OnDestroy()
+    {
+        stateList.DestroyRunTimeCopies();
+    }
+
     public void ChangeState(string key)
     {
         if (string.IsNullOrWhiteSpace(key))
