@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class TutorialManager : MonoBehaviour
 {
-    public TutorialManager Instance { get; private set; }
+    public static TutorialManager Instance { get; private set; }
 
     [Header("Tutorial Setting")]
     [SerializeField] private TutorialStateList stateList;
