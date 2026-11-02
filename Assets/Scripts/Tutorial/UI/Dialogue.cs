@@ -22,8 +22,10 @@ public class Dialogue : MonoBehaviour
     private int currentLineIndex;
 
     private bool active = false;
+    public bool Active => active;
 
     private bool isTyping = false;
+    public bool IsTyping => isTyping;
     private Coroutine TypeCoroutine;
 
     public bool isDisplayNow { get; private set;}
@@ -57,7 +59,7 @@ public class Dialogue : MonoBehaviour
         //ˆê’U‰¼“ü—Í
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
-            if (currentLineIndex < dialogueData.Count)
+            if (currentLineIndex + 1 < dialogueData.Count)
             {
                 if (isTyping)
                 {
@@ -138,6 +140,7 @@ public class Dialogue : MonoBehaviour
 
         messageBox.maxVisibleCharacters = int.MaxValue;
         isTyping = false;
+        Debug.Log("Dialogue: TypeText finished.");
         TypeCoroutine = null;
     }
 }

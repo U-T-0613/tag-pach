@@ -11,7 +11,7 @@ public class TutorialEntry
     [NonSerialized] private TutorialState runtimeState;
 
     public string Key => key;
-    public TutorialState SourceState => sourceState;
+    public TutorialState RuntimeState => runtimeState;
     public string NextStateKey => nextStateKey;
 
     public bool CreateRuntimeCopy()
@@ -23,7 +23,7 @@ public class TutorialEntry
         runtimeState = UnityEngine.Object.Instantiate(sourceState);
         runtimeState.name = $"{sourceState.name} (Runtime)";
         runtimeState.hideFlags = HideFlags.DontSave;
-
+        
         runtimeState.SetKey(key, nextStateKey);
 
         return true;
@@ -85,7 +85,7 @@ public class TutorialStateList
             runtimeState = null;
             return false;
         }
-        runtimeState = entry.SourceState;
+        runtimeState = entry.RuntimeState;
         return true;
     }
 

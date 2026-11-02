@@ -19,6 +19,3 @@ MonoBehaviour:
   - speakerName: "\u30B3\u30DE\u30CE\u30B3"
     message: "2\u30DA\u30FC\u30B8\u76EE"
     portrait: {fileID: 21300000, guid: 18ff807223c98314fafb93ccff7445df, type: 3}
-  - speakerName: "\u30B3\u30DE\u30CE\u30B3"
-    message: "\uFF8D\uFF9E\uFF82\uFF86\uFF71\uFF9D\uFF80\uFF89\uFF80\uFF92\uFF86\uFF94\uFF6F\uFF83\uFF99\uFF9D\uFF7C\uFF9E\uFF6C\uFF85\uFF72\uFF76\uFF97\uFF88"
-    portrait: {fileID: 21300000, guid: 18ff807223c98314fafb93ccff7445df, type: 3}

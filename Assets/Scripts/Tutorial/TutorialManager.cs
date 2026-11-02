@@ -62,7 +62,8 @@ public class TutorialManager : MonoBehaviour
             Debug.LogError($"TutorialManager: nextStateKey '{nextStateKey}' is not found.");
             return;
         }
-        if(currentState == nextState)
+        
+        if (currentState == nextState)
         {
             return;
         }
@@ -70,6 +71,6 @@ public class TutorialManager : MonoBehaviour
         currentState?.ExitState();
         currentState = nextState;
         currentState.EnterState(this);
-
+        
     }
 }

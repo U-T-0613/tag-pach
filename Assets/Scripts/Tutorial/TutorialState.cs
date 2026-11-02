@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TutorialState : ScriptableObject
 {
-    private TutorialManager tutorialManager;
+    protected TutorialManager tutorialManager;
 
     public string Key { get; private set; }
     public string NextStateKey { get;  private set; }
