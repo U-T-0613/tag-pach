@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         //---------------------------------------------------------------
-        TurnManager.Instance.RegisterPlayer(this);
+        TurnManager.Instance?.RegisterPlayer(this);
         //---------------------------------------------------------------
 
         ChangeState(initializeStatekey);

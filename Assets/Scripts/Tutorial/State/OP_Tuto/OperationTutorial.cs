@@ -4,6 +4,12 @@ using UnityEngine;
 public class OperationTutorial : TutorialState
 {
     [SerializeField] private DialogueData startDialogue;
+    private bool missionDisplayed = false;
+    private bool missionCleared = false;
+    public void SetClear(bool cleared)
+    {
+        missionCleared = cleared;
+    }
 
     public override void EnterState(TutorialManager tutorialManager)
     {
@@ -15,11 +21,24 @@ public class OperationTutorial : TutorialState
     {
         base.UpdateState();
 
-        if (!Dialogue.Instance.Active)
+        if (!Dialogue.Instance.Active && !missionDisplayed)
         {
-            Debug.Log($"OperationTutorial: Dialogue finished, changing to next state.: {this.NextStateKey}");
+            Mission.Instance.DisplayMission("åıÇ¡ÇƒÇ¢ÇÈÉ}ÉXÇ…èÊÇÈ");
+            missionDisplayed = true;
+        }
+
+        if(missionDisplayed && missionCleared)
+        {
+            Debug.Log("Player pressed Attack, clearing mission.");
+            Mission.Instance.ClearMission();
+        }
+
+        if(Mission.Instance.IsFinishedMission() && missionDisplayed)
+        {
             tutorialManager.ChangeState(this.NextStateKey);
         }
+
+
     }
 
     public override void FixedUpdateState()

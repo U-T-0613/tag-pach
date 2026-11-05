@@ -56,8 +56,7 @@ public class Dialogue : MonoBehaviour
 
         if (!dialogueData) return;
 
-        //ˆê’U‰¼“ü—Í
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        if (TutorialManager.Instance?.GetPlayerInputMag().Place.Pressed == true || TutorialManager.Instance?.GetPlayerInputOsh().Place.Pressed == true)
         {
             if (currentLineIndex + 1 < dialogueData.Count)
             {
@@ -81,6 +80,7 @@ public class Dialogue : MonoBehaviour
             else
             {
                 active = false;
+                TutorialManager.Instance?.EnablePlayer();
                 dialogueRoot.SetActive(active);
             }
         }
@@ -122,6 +122,8 @@ public class Dialogue : MonoBehaviour
         messageBox.ForceMeshUpdate();
         TypeCoroutine = StartCoroutine(TypeText());
 
+        TutorialManager.Instance?.DisablePlayer();
+
         return true;
     }
 
@@ -140,7 +142,6 @@ public class Dialogue : MonoBehaviour
 
         messageBox.maxVisibleCharacters = int.MaxValue;
         isTyping = false;
-        Debug.Log("Dialogue: TypeText finished.");
         TypeCoroutine = null;
     }
 }
