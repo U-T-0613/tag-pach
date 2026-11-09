@@ -94,7 +94,6 @@ public class Mission : MonoBehaviour
 
     public void DisplayMission(string missionText)
     {
-        Debug.Log("Mission: Displaying mission - " + missionText);
         Border.gameObject.SetActive(true);
         text.gameObject.SetActive(true);
         SetUIAlpha(1.0f);
@@ -120,7 +119,6 @@ public class Mission : MonoBehaviour
 
     public void HideMission()
     {
-        Debug.Log("Mission: Hiding mission.");
         isMissionActive = false;
         missionFadeTimer = fadeOutDuration;
     }

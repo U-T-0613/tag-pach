@@ -25,6 +25,7 @@ public class DialogueData : ScriptableObject
     [SerializeField]
     private List<DialogueLine> lines = new();
     public int Count => lines.Count;
+    public bool IsFinished = false;
 
     public bool TryGetLine(int index,out DialogueLine line)
     {

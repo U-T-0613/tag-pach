@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] private LABPDevice labpDevice;
     [SerializeField] private GameObject rootDisableObj;
 
+
     public void SetLABPDevice(LABPDevice device)
     {
         labpDevice = device;
@@ -48,7 +49,7 @@ public class Player : MonoBehaviour
         // ステータスのコピーインスタンスを生成
         stateList.CreateRunTimeCopies();
 
-        canPlaceStone = true;
+        SetCanPlaceStone(true);
     }
 
     void Start()
@@ -211,11 +212,9 @@ public class Player : MonoBehaviour
             return;
         }
 
-        if (input.Place != null &&
-            input.Place.Pressed &&
-            TurnManager.Instance != null &&
-            TurnManager.Instance.IsAttackPlayer(this) &&
-            canPlaceStone)
+        if (input.Place != null 
+            && input.Place.Pressed 
+            && canPlaceStone)
         {
             ChangeState("place");
         }
@@ -338,7 +337,7 @@ public class Player : MonoBehaviour
     public void ResetBattle()
     {
         // 石を置ける状態に戻す
-        canPlaceStone = true;
+        SetCanPlaceStone(true);
 
         // 現在立っているTileのハイライト解除
         if (OnStandingPiece != null)

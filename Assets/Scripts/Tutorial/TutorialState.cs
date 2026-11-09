@@ -7,6 +7,13 @@ public class TutorialState : ScriptableObject
     public string Key { get; private set; }
     public string NextStateKey { get;  private set; }
 
+    protected bool missionDisplayed = false;
+    protected bool missionCleared = false;
+    public void SetClear(bool cleared)
+    {
+        missionCleared = cleared;
+    }
+
 
     public void SetKey(string key, string nextStateKey)
     {
@@ -18,6 +25,7 @@ public class TutorialState : ScriptableObject
     public virtual void EnterState(TutorialManager tutorialManager)
     {
         this.tutorialManager = tutorialManager;
+        missionCleared = false;
     }
 
     public virtual void UpdateState(){}

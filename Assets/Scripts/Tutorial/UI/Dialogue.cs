@@ -81,6 +81,7 @@ public class Dialogue : MonoBehaviour
             {
                 active = false;
                 TutorialManager.Instance?.EnablePlayer();
+                dialogueData.IsFinished = true;
                 dialogueRoot.SetActive(active);
             }
         }
@@ -114,6 +115,7 @@ public class Dialogue : MonoBehaviour
             dialogueRoot?.SetActive(active);
         }
 
+        dialogueData.IsFinished = false;
         speakerIcon.sprite = dialogueLine.Portrait;
         speakerName.text = dialogueLine.SpeakerName;
         messageBox.maxVisibleCharacters = 0;

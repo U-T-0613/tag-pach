@@ -21,7 +21,6 @@ public class TutorialManager : MonoBehaviour
 
     private TutorialState currentState;
 
-
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -113,5 +112,10 @@ public class TutorialManager : MonoBehaviour
     {
         player_mag.enabled = false;
         player_osh.enabled = false;
+    }
+
+    public void MissionClear()
+    {
+        currentState?.SetClear(true);
     }
 }

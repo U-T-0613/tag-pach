@@ -5,6 +5,7 @@ public class FieldTile : MonoBehaviour
     [Header("Material")]
     [SerializeField] private Material defaultMaterial;
     [SerializeField] private Material highlightMaterial;
+    [SerializeField] private Material spotLightMaterial;
 
     // À•Wî•ñ
     [SerializeField]private Vector2Int coordinate;
@@ -112,6 +113,14 @@ public class FieldTile : MonoBehaviour
             FieldManager.Instance.SubtractStoneCount();
             Destroy(PutedStone.gameObject);
             PutedStone = null;
+        }
+    }
+
+    public void SetSpotLightMaterial()
+    {
+        if (spotLightMaterial != null)
+        {
+            this.gameObject.GetComponent<MeshRenderer>().material = spotLightMaterial;
         }
     }
 }

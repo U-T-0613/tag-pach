@@ -10,6 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86b8715c5d553b64881a606bb9fe5599, type: 3}
-  m_Name: OperationTutorial
-  m_EditorClassIdentifier: Assembly-CSharp::OperationTutorial
+  m_Name: TutorialIntroduction
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialIntroduction
   startDialogue: {fileID: 11400000, guid: 2d8fdb7a1353b224faf3600cce5dbb8d, type: 2}
+  secondDialogue: {fileID: 11400000, guid: fb81aa9fdb031724cbd57fbb664fa7af, type: 2}
+  scanDuration: 4
