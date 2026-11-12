@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OpeMove_Tutorial
   startDialogueData: {fileID: 11400000, guid: 52289f7c6efb966448e25decfb9932cb, type: 2}
   lightingTileCordinate:
-  - {x: 5, y: 6}
-  - {x: 8, y: 6}
+  - {x: 4, y: 5}
+  - {x: 7, y: 5}

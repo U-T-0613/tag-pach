@@ -7,6 +7,7 @@ public class HelpIcon : MonoBehaviour
     // インスタンス一覧
     [Header("Ref")]
     [SerializeField] private Help_Move move; public Help_Move Move => move;
+    [SerializeField] private GameObject place; public GameObject Place => place;
 
 
     private void Awake()
@@ -22,10 +23,12 @@ public class HelpIcon : MonoBehaviour
 
         // 全非表示
         move.gameObject.SetActive(false);
+        place.gameObject.SetActive(false);
     }
 
     private void OnDestroy()
     {
         move = null;
+        place = null;
     }
 }

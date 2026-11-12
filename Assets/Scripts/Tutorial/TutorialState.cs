@@ -2,8 +2,21 @@ using UnityEngine;
 
 public class TutorialState : ScriptableObject
 {
+    protected enum TutorialStep
+    {
+        Step1,
+        Step2,
+        Step3,
+        Step4,
+        Step5,
+        Step6,
+        Step7,
+        Step8,
+        Step9,
+        Step10
+    }
     protected TutorialManager tutorialManager;
-
+    protected TutorialStep currentStep = TutorialStep.Step1;
     public string Key { get; private set; }
     public string NextStateKey { get;  private set; }
 
@@ -35,4 +48,9 @@ public class TutorialState : ScriptableObject
     public virtual void LateUpdateState(){}
 
     public virtual void ExitState(){}
+
+    protected void ChangeStep(TutorialStep nextStep)
+    {
+        currentStep = nextStep;
+    }
 }

@@ -4,20 +4,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "OpeMove_Tutorial", menuName = "Tutorial/State/OpeMove_Tutorial")]
 public class OpeMove_Tutorial : TutorialState
 {
-    private enum TutorialStep
-    {
-        Step1,
-        Step2,
-        Step3,
-        Step4,
-        Step5
-    }
-
     [SerializeField] private DialogueData startDialogueData;
 
     [SerializeField] private Vector2Int[] lightingTileCordinate;
-
-    private TutorialStep currentStep = TutorialStep.Step1;
 
     public override void EnterState(TutorialManager tutorialManager)
     {
@@ -114,10 +103,5 @@ public class OpeMove_Tutorial : TutorialState
         base.ExitState();
         tutorialManager.GetPlayerMag().SetCanPlaceStone(true);
         tutorialManager.GetPlayerOsh().SetCanPlaceStone(true);
-    }
-
-    private void ChangeStep(TutorialStep nextStep)
-    {
-        currentStep = nextStep;
     }
 }
