@@ -6,6 +6,10 @@ public class FieldTile : MonoBehaviour
     [SerializeField] private Material defaultMaterial;
     [SerializeField] private Material highlightMaterial;
 
+    [SerializeField] private Material holoMaterial;
+
+    private bool holo = false;
+
     // À•Wî•ñ
     [SerializeField]private Vector2Int coordinate;
     public Stone PutedStone {get; private set; } = null;
@@ -17,7 +21,12 @@ public class FieldTile : MonoBehaviour
 
     private void Update()
     {
-        if(PutedStone != null)
+        if (holo)
+        {
+            return;
+        }
+
+        if (PutedStone != null)
         {
             if(PutedStone.IsTransitioning)
             {
@@ -87,6 +96,11 @@ public class FieldTile : MonoBehaviour
 
     public void LightUpTile()
     {
+        if (holo)
+        {
+            return;
+        }
+
         if (PutedStone && PutedStone.IsTransitioning)
         {
             this.gameObject.GetComponent<MeshRenderer>().material.color = Color.Lerp(PutedStone.Owner.TeamColor, highlightMaterial.color,PutedStone.CurrentProg);
@@ -99,6 +113,12 @@ public class FieldTile : MonoBehaviour
 
     public void ResetTileColor()
     {
+        // ホログラム表示中は変更しない
+        if (holo)
+        {
+            return;
+        }
+
         if (defaultMaterial != null)
         {
             this.gameObject.GetComponent<MeshRenderer>().material = defaultMaterial;
@@ -113,5 +133,27 @@ public class FieldTile : MonoBehaviour
             Destroy(PutedStone.gameObject);
             PutedStone = null;
         }
+    }
+
+    public void SetHolo(bool active)
+    {
+        if (holo == active)
+        {
+            return;
+        }
+
+        MeshRenderer renderer = GetComponent<MeshRenderer>();
+
+        if (active)
+        {
+            renderer.material = holoMaterial;
+        }
+        else
+        {
+            // ホログラム終了時は必ず通常マテリアルへ
+            renderer.material = defaultMaterial;
+        }
+
+        holo = active;
     }
 }

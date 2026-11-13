@@ -63,6 +63,8 @@ public class TurnManager : MonoBehaviour
 
     // Turn開始State
     private TurnStartState turnStartState;
+    
+    private TurnFieldEventState fieldEventState;
 
     // Player操作中State
     private TurnPlayingState playingState;
@@ -88,6 +90,7 @@ public class TurnManager : MonoBehaviour
         // Turn State生成
         battleStartState = new TurnBattleStartState();
         turnStartState = new TurnStartState();
+        fieldEventState = new TurnFieldEventState();
         playingState = new TurnPlayingState();
         turnEndState = new TurnEndState();
         resultState = new TurnResultState();
@@ -212,6 +215,9 @@ public class TurnManager : MonoBehaviour
         }
 
         turnCount = 1;
+
+        // イベントの実行履歴をリセット
+        FieldEventManager.Instance?.ResetTurnEvent();
 
         isBattleStarted = true;
         isBattlePaused = false;
@@ -368,6 +374,10 @@ public class TurnManager : MonoBehaviour
 
             case TurnStateType.TurnStart:
                 currentState = turnStartState;
+                break;
+
+            case TurnStateType.FieldEvent:
+                currentState = fieldEventState;
                 break;
 
             case TurnStateType.Playing:

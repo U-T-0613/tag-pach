@@ -11,6 +11,14 @@ public class TurnStartState : TurnBaseState
 
     public override void UpdateState(TurnManager manager)
     {
+        FieldEventManager eventManager = FieldEventManager.Instance;
+
+        if (eventManager != null && eventManager.HasTurnEvent(manager.GetTurnCount()))
+        {
+            manager.ChangeState(TurnStateType.FieldEvent);
+            return;
+        }
+
         manager.ChangeState(TurnStateType.Playing);
     }
 
