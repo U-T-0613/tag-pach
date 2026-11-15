@@ -408,6 +408,9 @@ public class Player : MonoBehaviour
         {
             OnStandingPiece.ResetTileColor();
             OnStandingPiece = null;
+        }
+    }
+
     // Deviceへの指示入力
     private void UpdateCommunicationInput()
     {

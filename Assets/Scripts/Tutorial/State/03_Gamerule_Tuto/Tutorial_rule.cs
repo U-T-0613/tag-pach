@@ -10,6 +10,8 @@ public class Tutorial_rule : TutorialState
     [SerializeField] private DialogueData startDialogueData;
     [SerializeField] private DialogueData DialogueData_2;
     [SerializeField] private DialogueData failedDialogue;
+    [SerializeField] private DialogueData cancelDialogue;
+
     [SerializeField] private int magSampleLineIndex = 7;
     [SerializeField] private int oshSampleLineIndex = 4;
 
@@ -57,14 +59,12 @@ public class Tutorial_rule : TutorialState
             case TutorialStep.Step1:
                 if (startDialogueData.IsFinished)
                 {
-                    Debug.Log("配置へGO");
                     ChangeStep(TutorialStep.Step2);
                 }
                 break;
 
             case TutorialStep.Step2:
                 // サンプル列に駒を配置
-                Debug.Log("配置");
                 FieldManager.Instance.ResetField();
                 foreach (var tileCord in magSampleLine)
                 {
@@ -101,9 +101,16 @@ public class Tutorial_rule : TutorialState
                 tgtTile[2] = FieldManager.Instance.GetFieldTile(new Vector2Int(magSampleLineIndex, 0));
                 tgtTile[3] = FieldManager.Instance.GetFieldTile(new Vector2Int(magSampleLineIndex, 5));
 
-                for(int i = 0;i < 4;i++)
+                foreach (var tgt in FieldManager.Instance.GetAllStoneField())
                 {
-                    tgtTile[i].ShowColor();
+                    if (tgt.GetCoordinate() != new Vector2Int(magSampleLineIndex, 0) && tgt.GetCoordinate() != new Vector2Int(magSampleLineIndex, 1) && tgt.GetCoordinate() != new Vector2Int(magSampleLineIndex, 2) && tgt.GetCoordinate() != new Vector2Int(magSampleLineIndex, 3) && tgt.GetCoordinate() != new Vector2Int(magSampleLineIndex, 4) && tgt.GetCoordinate() != new Vector2Int(magSampleLineIndex, 5) &&
+                        tgt.GetCoordinate() != new Vector2Int(oshSampleLineIndex, 0) && tgt.GetCoordinate() != new Vector2Int(oshSampleLineIndex, 1) && tgt.GetCoordinate() != new Vector2Int(oshSampleLineIndex, 2) && tgt.GetCoordinate() != new Vector2Int(oshSampleLineIndex, 3) && tgt.GetCoordinate() != new Vector2Int(oshSampleLineIndex, 4) && tgt.GetCoordinate() != new Vector2Int(oshSampleLineIndex, 5))
+                    {//サンプル列以外に駒が置かれている場合はダイアログを出してリセット
+                        Dialogue.Instance.DisplayDialogue(cancelDialogue);
+                        ChangeStep(TutorialStep.Step6);
+                    }
+
+                    tgt.ShowColor();
                 }
 
                 // オシロマッチ確認
@@ -112,9 +119,21 @@ public class Tutorial_rule : TutorialState
                 {
                     osh_matched = true;
                 }
+                else if ((tgtTile[0].PutedStone != null) && (tgtTile[0].PutedStone.Owner == tutorialManager.GetPlayerMag()) ||
+                         (tgtTile[1].PutedStone != null) && (tgtTile[1].PutedStone.Owner == tutorialManager.GetPlayerMag()))
+                {
+                    Dialogue.Instance.DisplayDialogue(failedDialogue);
+                    ChangeStep(TutorialStep.Step5);
+                }
 
+                // マグニマッチ確認
                 if ((tgtTile[2].PutedStone != null) && (tgtTile[2].PutedStone.Owner == tutorialManager.GetPlayerMag()) ||
-                   (tgtTile[3].PutedStone != null) && (tgtTile[3].PutedStone.Owner == tutorialManager.GetPlayerMag()))
+                (tgtTile[3].PutedStone != null) && (tgtTile[3].PutedStone.Owner == tutorialManager.GetPlayerMag()))
+                {
+                    mag_matched = true;
+                }
+                else if ((tgtTile[2].PutedStone != null) && (tgtTile[2].PutedStone.Owner == tutorialManager.GetPlayerOsh()) ||
+                (tgtTile[3].PutedStone != null) && (tgtTile[3].PutedStone.Owner == tutorialManager.GetPlayerOsh()))
                 {
                     mag_matched = true;
                 }
@@ -141,19 +160,28 @@ public class Tutorial_rule : TutorialState
                 if (Mission.Instance.IsFinishedMission())
                 {
                     Dialogue.Instance.DisplayDialogue(DialogueData_2);
-                    ChangeStep(TutorialStep.Step6);
+                    ChangeStep(TutorialStep.Step7);
                 }
                 break;
 
             case TutorialStep.Step5:
                 // 詰み防止分岐
-                if(failedDialogue.IsFinished)
+                if (failedDialogue.IsFinished)
                 {
                     ChangeStep(TutorialStep.Step2);
                 }
                 break;
 
             case TutorialStep.Step6:
+                // ターゲット以外の場所に置かれている場合はリセット分岐
+                if (cancelDialogue.IsFinished)
+                {
+                    ChangeStep(TutorialStep.Step2);
+                }
+                break;
+
+            case TutorialStep.Step7:
+
                 if (DialogueData_2.IsFinished)
                 {
 

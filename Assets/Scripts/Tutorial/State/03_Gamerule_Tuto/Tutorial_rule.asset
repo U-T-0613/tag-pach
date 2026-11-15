@@ -16,5 +16,6 @@ MonoBehaviour:
   startDialogueData: {fileID: 11400000, guid: d20f4e484bc440149b32b93ba38a4b4a, type: 2}
   DialogueData_2: {fileID: 11400000, guid: f4ba00c27b45b7e48ad9b76b9b3c804c, type: 2}
   failedDialogue: {fileID: 11400000, guid: da5905049b2b1e843a4af3f3322ce3a8, type: 2}
+  cancelDialogue: {fileID: 11400000, guid: f8729d080466dbc459c437b97f8abefc, type: 2}
   magSampleLineIndex: 7
   oshSampleLineIndex: 4
