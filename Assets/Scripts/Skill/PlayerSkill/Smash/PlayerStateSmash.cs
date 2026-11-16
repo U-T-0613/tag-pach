@@ -18,6 +18,8 @@ public class PlayerStateSmash : PlayerState
     [SerializeField, Min(0.01f)]
     private float rangeDisplayDuration = 0.2f;
 
+    public float CooldownTime => settings != null ? settings.CooldownTime : 0f;
+
     public float RemainingCooldown =>
         Mathf.Max(0f, nextUseTime - Time.time);
 
