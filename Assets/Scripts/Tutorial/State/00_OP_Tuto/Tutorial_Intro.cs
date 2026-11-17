@@ -20,8 +20,7 @@ public class TutorialIntroduction : TutorialState
         Dialogue.Instance.DisplayDialogue(startDialogue);
         onece = false;
         scanWait = 0.0f;
-        tutorialManager.GetPlayerMag().SetCanPlaceStone(false);
-        tutorialManager.GetPlayerOsh().SetCanPlaceStone(false);
+
     }
 
     public override void UpdateState()
@@ -70,7 +69,5 @@ public class TutorialIntroduction : TutorialState
     public override void ExitState()
     {
         base.ExitState();
-        tutorialManager.GetPlayerMag().SetCanPlaceStone(true);
-        tutorialManager.GetPlayerOsh().SetCanPlaceStone(true);
     }
 }

@@ -600,7 +600,7 @@ public class TurnManager : MonoBehaviour
 
     private void SetCurrentAttackPlayer(Player player)
     {
-        currentAttackPlayer.SetCanPlaceStone(false);
+        currentAttackPlayer?.SetCanPlaceStone(false);
         currentAttackPlayer = player;
         currentAttackPlayer.SetCanPlaceStone(true);
     }

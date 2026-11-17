@@ -16,11 +16,4 @@ public class Help_Place : MonoBehaviour
         helpIcon_left.sprite = releaseImage;
         helpIcon_right.sprite = releaseImage;
     }
-
-    // Update is called once per frame
-    void UpdateInterface(bool isPressed)
-    {
-        helpIcon_left.sprite = isPressed ? pressedImage : releaseImage;
-        helpIcon_right.sprite = isPressed ? pressedImage : releaseImage;
-    }
 }

@@ -11,8 +11,6 @@ public class PlaPlace_Tutorials : TutorialState
         base.EnterState(tutorialManager);
         currentStep = TutorialStep.Step1;
         Dialogue.Instance.DisplayDialogue(startDialogueData);
-        tutorialManager.GetPlayerInputMag().SetInputEnable(false);
-        tutorialManager.GetPlayerInputOsh().SetInputEnable(false);
     }
 
     public override void UpdateState()
@@ -25,8 +23,8 @@ public class PlaPlace_Tutorials : TutorialState
                 // ダイアログ1の終了を検知
                 if (startDialogueData.IsFinished)
                 {
-                    tutorialManager.GetPlayerInputMag().SetInputEnable(true);
-                    tutorialManager.GetPlayerInputOsh().SetInputEnable(true);
+                    tutorialManager.GetPlayerMag().SetCanPlaceStone(true);
+                    tutorialManager.GetPlayerOsh().SetCanPlaceStone(true);
                     Mission.Instance.DisplayMission("両方のプレイヤーが石を置く");
                     ChangeStep(TutorialStep.Step2);
                 }
@@ -58,8 +56,8 @@ public class PlaPlace_Tutorials : TutorialState
 
                         if (oshPutStone && magPutStone)
                         {
-                            tutorialManager.GetPlayerInputMag().SetInputEnable(false);
-                            tutorialManager.GetPlayerInputOsh().SetInputEnable(false);
+                            tutorialManager.GetPlayerMag().SetCanPlaceStone(false);
+                            tutorialManager.GetPlayerOsh().SetCanPlaceStone(false);
                             Mission.Instance.ClearMission();
                             HelpIcon.Instance.Place.gameObject.SetActive(false);
                             ChangeStep(TutorialStep.Step3);

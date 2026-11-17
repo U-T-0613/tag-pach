@@ -41,6 +41,18 @@ public class Player : MonoBehaviour
         canPlaceStone = value;
     }
 
+    private bool smashEnable = true;
+    public void SetSmashEnable(bool value)
+    {
+        smashEnable = value;
+    }
+
+    private bool forcePlaceEnable = true;
+    public void SetForcePlaceEnable(bool value)
+    {
+        forcePlaceEnable = value;
+    }
+
     private PlayerState currentState;
     public FieldTile OnStandingPiece { get; private set; }
 
@@ -216,17 +228,21 @@ public class Player : MonoBehaviour
             input.ForcePlace.Pressed &&
             stateList.TryGetRuntimeState("forcePlace", out var skillState) &&
             skillState is PlayerStateForcePlace forcePlaceState &&
-            forcePlaceState.CanUse(this))
+            forcePlaceState.CanUse(this)&& 
+            forcePlaceEnable)
         {
             ChangeState("forcePlace");
             return;
         }
 
+
+
         if (input.Attack != null &&
             input.Attack.Pressed &&
             stateList.TryGetRuntimeState("smash", out var attackState) &&
             attackState is PlayerStateSmash smashState &&
-            smashState.CanUse(this))
+            smashState.CanUse(this) && 
+            smashEnable)
         {
             ChangeState("smash");
             return;

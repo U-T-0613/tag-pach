@@ -5,15 +5,15 @@ using UnityEngine;
 public class OpeMove_Tutorial : TutorialState
 {
     [SerializeField] private DialogueData startDialogueData;
+    [SerializeField] private DialogueData DialogueData_2;
 
     [SerializeField] private Vector2Int[] lightingTileCordinate;
 
     public override void EnterState(TutorialManager tutorialManager)
     {
         base.EnterState(tutorialManager);
+
         Dialogue.Instance.DisplayDialogue(startDialogueData);
-        tutorialManager.GetPlayerMag().SetCanPlaceStone(false);
-        tutorialManager.GetPlayerOsh().SetCanPlaceStone(false);
         currentStep = TutorialStep.Step1;
     }
 
@@ -76,13 +76,20 @@ public class OpeMove_Tutorial : TutorialState
             case TutorialStep.Step4: // ミッションのアニメーション終了チェック
                 if (Mission.Instance.IsFinishedMission())
                 {// ミッションがクリアされて且つミッションを表示していたなら次のステートに遷移する
-                    tutorialManager.ChangeState(this.NextStateKey);
+                    Dialogue.Instance.DisplayDialogue(DialogueData_2);
                     ChangeStep(TutorialStep.Step5);
                 }
                 break;
 
             case TutorialStep.Step5:
-                // 何もしない
+                if(DialogueData_2.IsFinished)
+                {
+                    tutorialManager.ChangeState(this.NextStateKey);
+                    ChangeStep(TutorialStep.Step6);
+                }
+                break;
+
+            case TutorialStep.Step6:
                 break;
         }
 
@@ -101,7 +108,5 @@ public class OpeMove_Tutorial : TutorialState
     public override void ExitState()
     {
         base.ExitState();
-        tutorialManager.GetPlayerMag().SetCanPlaceStone(true);
-        tutorialManager.GetPlayerOsh().SetCanPlaceStone(true);
     }
 }

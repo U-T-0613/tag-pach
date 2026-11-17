@@ -28,13 +28,13 @@ public class Dialogue : MonoBehaviour
     public bool IsTyping => isTyping;
     private Coroutine TypeCoroutine;
 
-    public bool isDisplayNow { get; private set;}
+    public bool isDisplayNow { get; private set; }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     private void Awake()
     {
-        if(Instance && Instance != this)
+        if (Instance && Instance != this)
         {
             Destroy(this);
         }
@@ -56,35 +56,39 @@ public class Dialogue : MonoBehaviour
 
         if (!dialogueData) return;
 
+
         if (TutorialManager.Instance?.GetPlayerInputMag().Place.Pressed == true || TutorialManager.Instance?.GetPlayerInputOsh().Place.Pressed == true)
         {
-            if (currentLineIndex + 1 < dialogueData.Count)
-            {
-                if (isTyping)
-                {
-                    if (TypeCoroutine != null)
-                    {
-                        StopCoroutine(TypeCoroutine);
-                        TypeCoroutine = null;
-                    }
 
-                    messageBox.maxVisibleCharacters = int.MaxValue;
-                    isTyping = false;
+
+            if (isTyping)
+            {
+                if (TypeCoroutine != null)
+                {
+                    StopCoroutine(TypeCoroutine);
+                    TypeCoroutine = null;
                 }
-                else if (dialogueData.Count > 0)
+
+                messageBox.maxVisibleCharacters = int.MaxValue;
+                isTyping = false;
+            }
+            else
+            {
+                if (dialogueData.Count > 0 && currentLineIndex < dialogueData.Count - 1)
                 {
                     ++currentLineIndex;
                     ShowLine(currentLineIndex);
                 }
-            }
-            else
-            {
-                active = false;
-                TutorialManager.Instance?.EnablePlayer();
-                dialogueData.IsFinished = true;
-                dialogueRoot.SetActive(active);
+                else
+                {
+                    active = false;
+                    TutorialManager.Instance?.EnablePlayer();
+                    dialogueData.IsFinished = true;
+                    dialogueRoot.SetActive(active);
+                }
             }
         }
+
     }
 
     private void FixedUpdate()
@@ -115,6 +119,15 @@ public class Dialogue : MonoBehaviour
             dialogueRoot?.SetActive(active);
         }
 
+        if (TypeCoroutine != null)
+        {
+            StopCoroutine(TypeCoroutine);
+            TypeCoroutine = null;
+
+            messageBox.maxVisibleCharacters = int.MaxValue;
+        }
+
+        isTyping = false;
         dialogueData.IsFinished = false;
         speakerIcon.sprite = dialogueLine.Portrait;
         speakerName.text = dialogueLine.SpeakerName;
@@ -123,6 +136,7 @@ public class Dialogue : MonoBehaviour
 
         messageBox.ForceMeshUpdate();
         TypeCoroutine = StartCoroutine(TypeText());
+        isTyping = true;
 
         TutorialManager.Instance?.DisablePlayer();
 
@@ -131,12 +145,10 @@ public class Dialogue : MonoBehaviour
 
     private IEnumerator TypeText()
     {
-        isTyping = true;
-
         int charCount = messageBox.textInfo.characterCount;
         var wait = new WaitForSecondsRealtime(Mathf.Max(0.001f, messageSpeed));
 
-        for(int i = 0;i <= charCount; i++)
+        for (int i = 0; i <= charCount; i++)
         {
             messageBox.maxVisibleCharacters = i;
             yield return wait;

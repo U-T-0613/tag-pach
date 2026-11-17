@@ -33,10 +33,6 @@ public class Tutorial_rule : TutorialState
             stonePrefub = Resources.Load<GameObject>("Prefabs/Stone_Komanoko");
         }
 
-        mag_matched = false;
-        osh_matched = false;
-
-        // サンプル列の初期化
         magSampleLine[0] = new Vector2Int(magSampleLineIndex, 1);
         magSampleLine[1] = new Vector2Int(magSampleLineIndex, 2);
         magSampleLine[2] = new Vector2Int(magSampleLineIndex, 3);
@@ -47,8 +43,8 @@ public class Tutorial_rule : TutorialState
         oshSampleLine[2] = new Vector2Int(oshSampleLineIndex, 3);
         oshSampleLine[3] = new Vector2Int(oshSampleLineIndex, 4);
 
-        tutorialManager.GetPlayerInputMag().SetInputEnable(false);
-        tutorialManager.GetPlayerInputOsh().SetInputEnable(false);
+        mag_matched = false;
+        osh_matched = false;
     }
 
     public override void UpdateState()
@@ -87,6 +83,9 @@ public class Tutorial_rule : TutorialState
                 MatchStorage.Instance.ClearMatchData();
                 Mission.Instance.DisplayMission("自分の色の駒を5個並べる");
                 ChangeStep(TutorialStep.Step3);
+
+                tutorialManager.GetPlayerMag().SetCanPlaceStone(true);
+                tutorialManager.GetPlayerOsh().SetCanPlaceStone(true);
 
                 break;
 
@@ -159,6 +158,8 @@ public class Tutorial_rule : TutorialState
                 // 両方が目標達成
                 if (Mission.Instance.IsFinishedMission())
                 {
+                    tutorialManager.GetPlayerMag().SetCanPlaceStone(false);
+                    tutorialManager.GetPlayerOsh().SetCanPlaceStone(false);
                     Dialogue.Instance.DisplayDialogue(DialogueData_2);
                     ChangeStep(TutorialStep.Step7);
                 }
@@ -184,7 +185,8 @@ public class Tutorial_rule : TutorialState
 
                 if (DialogueData_2.IsFinished)
                 {
-
+                    FieldManager.Instance.ResetField();
+                    tutorialManager.ChangeState(this.NextStateKey);
                 }
                 break;
         }

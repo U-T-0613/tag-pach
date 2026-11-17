@@ -8,7 +8,9 @@ public class HelpIcon : MonoBehaviour
     [Header("Ref")]
     [SerializeField] private Help_Move move; public Help_Move Move => move;
     [SerializeField] private GameObject place; public GameObject Place => place;
-
+    [SerializeField] private GameObject attack; public GameObject Attack => attack;
+    [SerializeField] private GameObject forcePlace; public GameObject ForcePlace => forcePlace;
+    [SerializeField] private GameObject scan; public GameObject Scan => scan;
 
     private void Awake()
     {
@@ -24,6 +26,9 @@ public class HelpIcon : MonoBehaviour
         // ‘S”ñ•\Ž¦
         move.gameObject.SetActive(false);
         place.gameObject.SetActive(false);
+        attack.gameObject.SetActive(false);
+        forcePlace.gameObject.SetActive(false);
+        scan.gameObject.SetActive(false);
     }
 
     private void OnDestroy()

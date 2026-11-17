@@ -39,6 +39,15 @@ public class TutorialState : ScriptableObject
     {
         this.tutorialManager = tutorialManager;
         missionCleared = false;
+
+        tutorialManager.GetPlayerMag().SetCanPlaceStone(false);
+        tutorialManager.GetPlayerMag().SetSmashEnable(false);
+        tutorialManager.GetPlayerMag().SetForcePlaceEnable(false);
+
+        tutorialManager.GetPlayerOsh().SetCanPlaceStone(false);
+        tutorialManager.GetPlayerOsh().SetSmashEnable(false);
+        tutorialManager.GetPlayerOsh().SetForcePlaceEnable(false);
+
     }
 
     public virtual void UpdateState(){}
