@@ -5,6 +5,7 @@ public class FieldTile : MonoBehaviour
     [Header("Material")]
     [SerializeField] private Material defaultMaterial;
     [SerializeField] private Material highlightMaterial;
+    [SerializeField] private Material spotLightMaterial;
 
     [SerializeField] private Material holoMaterial;
 
@@ -49,7 +50,7 @@ public class FieldTile : MonoBehaviour
 
         MatchCount count = FieldManager.Instance.CheckMatch(this.coordinate);
 
-        FieldCamera.Instance.CameraShake(0.1f, 0.2f);
+        FieldCamera.Instance?.CameraShake(0.1f, 0.2f);
 
         if (count.lineDir_x1_y0 >= MATCH_COUNT)
         {
@@ -155,5 +156,14 @@ public class FieldTile : MonoBehaviour
         }
 
         holo = active;
+        
+    }
+    
+    public void SetSpotLightMaterial()
+    {
+        if (spotLightMaterial != null)
+        {
+            this.gameObject.GetComponent<MeshRenderer>().material = spotLightMaterial;
+        }
     }
 }

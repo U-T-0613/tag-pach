@@ -6,7 +6,7 @@ using UnityEngine;
 public class SearchSkill : MonoBehaviour
 {
     [SerializeField] private SearchSettings settings;
-    [SerializeField] private Transform fieldRoot;
+    private Transform fieldRoot;
     [SerializeField] private SearchWaveView waveView;
 
     private PlayerInputReader input;
@@ -24,32 +24,36 @@ public class SearchSkill : MonoBehaviour
     private void Awake()
     {
         input = GetComponent<PlayerInputReader>();
+
+        FindFieldRoot();
     }
 
     private void Update()
     {
-        TurnManager turn = TurnManager.Instance;
-
-        if (turn == null || !turn.IsBattleStarted())
+        if (TutorialManager.Instance == null)
         {
-            isSearching = false;
-            return;
+            TurnManager turn = TurnManager.Instance;
+
+            if (turn == null || !turn.IsBattleStarted())
+            {
+                isSearching = false;
+                return;
+            }
+
+            if (Time.timeScale <= 0f || turn.IsBattlePaused())
+            {
+                return;
+            }
+
+            if (turn.GetCurrentStateType() == TurnStateType.Reposition ||
+                turn.GetCurrentStateType() == TurnStateType.Result)
+            {
+                isSearching = false;
+                return;
+            }
         }
 
-        if (Time.timeScale <= 0f || turn.IsBattlePaused())
-        {
-            return;
-        }
-
-        remainingCooldown = Mathf.Max(
-            0f, remainingCooldown - Time.deltaTime);
-
-        if (turn.GetCurrentStateType() == TurnStateType.Reposition ||
-            turn.GetCurrentStateType() == TurnStateType.Result)
-        {
-            isSearching = false;
-            return;
-        }
+        remainingCooldown = Mathf.Max( 0f, remainingCooldown - Time.deltaTime);
 
         if (input != null && input.isActiveAndEnabled &&
             input.Skill.Pressed)
@@ -100,20 +104,31 @@ public class SearchSkill : MonoBehaviour
             return false;
         }
 
-        TurnManager turn = TurnManager.Instance;
-
-        if (turn == null || !turn.IsBattleStarted() ||
-            turn.IsBattlePaused() || Time.timeScale <= 0f ||
-            turn.GetCurrentStateType() != TurnStateType.Playing)
+        if (TutorialManager.Instance == null)
         {
-            return false;
+            TurnManager turn = TurnManager.Instance;
+
+            if (turn == null || !turn.IsBattleStarted() ||
+                turn.IsBattlePaused() || Time.timeScale <= 0f ||
+                turn.GetCurrentStateType() != TurnStateType.Playing)
+            {
+                return false;
+            }
         }
 
         tiles = fieldRoot.GetComponentsInChildren<FieldTile>();
 
         searchCenter = transform.position;
         currentRadius = 0f;
-        remainingCooldown = Mathf.Max(0f, settings.CooldownTime);
+
+        if (TutorialManager.Instance != null)
+        {
+            remainingCooldown = 5.0f;
+        }
+        else
+        {
+            remainingCooldown = Mathf.Max(0f, settings.CooldownTime);
+        }
 
         revealedStones.Clear();
         isSearching = true;
@@ -164,6 +179,27 @@ public class SearchSkill : MonoBehaviour
         if (waveView != null)
         {
             waveView.Hide();
+        }
+    }
+
+    private void FindFieldRoot()
+    {
+        if (fieldRoot != null)
+            return;
+
+        FieldManager manager = FindAnyObjectByType<FieldManager>();
+
+        if (manager == null)
+        {
+            Debug.LogError("FieldManagerÇ™å©Ç¬Ç©ÇËÇ‹ÇπÇÒÅB", this);
+            return;
+        }
+
+        fieldRoot = manager.transform.Find("Generated Fields");
+
+        if (fieldRoot == null)
+        {
+            Debug.LogError("Generated FieldsÇ™å©Ç¬Ç©ÇËÇ‹ÇπÇÒÅB", this);
         }
     }
 }

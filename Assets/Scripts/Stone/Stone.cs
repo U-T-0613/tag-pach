@@ -233,6 +233,14 @@ public class Stone : MonoBehaviour
         }
     }
 
+    public void ResetColor()
+    {
+        ApplyColor(neutralColor);
+        isTransitioning = false;
+        elapsedTime = 0f;
+        CurrentProg = 0f;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         SetHolo(true);

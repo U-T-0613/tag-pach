@@ -311,10 +311,12 @@ public class TurnManager : MonoBehaviour
     // ƒ‰ƒ“ƒ_ƒ€‚ÅæUPlayer‚ğŒˆ’è‚·‚é
     private void DecideRandomFirstPlayer()
     {
-        currentAttackPlayer =
+        Player temp =
             Random.Range(0, 2) == 0
                 ? player1
                 : player2;
+
+        SetCurrentAttackPlayer(temp);
 
         hasFirstPlayer = true;
     }
@@ -337,7 +339,7 @@ public class TurnManager : MonoBehaviour
             return;
         }
 
-        currentAttackPlayer = player;
+        SetCurrentAttackPlayer(player);
 
         hasFirstPlayer = true;
     }
@@ -460,11 +462,11 @@ public class TurnManager : MonoBehaviour
     {
         if (currentAttackPlayer == player1)
         {
-            currentAttackPlayer = player2;
+            SetCurrentAttackPlayer(player2);
         }
         else
         {
-            currentAttackPlayer = player1;
+            SetCurrentAttackPlayer(player1);
         }
     }
 
@@ -604,6 +606,13 @@ public class TurnManager : MonoBehaviour
     public Player GetBattleWinner()
     {
         return battleWinner;
+    }
+
+    private void SetCurrentAttackPlayer(Player player)
+    {
+        currentAttackPlayer?.SetCanPlaceStone(false);
+        currentAttackPlayer = player;
+        currentAttackPlayer.SetCanPlaceStone(true);
     }
 
 #if UNITY_EDITOR
