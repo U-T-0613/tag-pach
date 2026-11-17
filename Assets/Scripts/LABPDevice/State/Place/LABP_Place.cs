@@ -106,7 +106,6 @@ public class LABP_Place : LABPState
                     float clamp = Mathf.Clamp01(inf.normalizedTime);
                     var dropPosition = Vector3.Lerp(owner.transform.position, targetPosition, clamp);
 
-                    Debug.Log($"DroppPos : {dropPosition}");
                     owner.transform.position = dropPosition;
 
                     if (clamp >= 1.0f)

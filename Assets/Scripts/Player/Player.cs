@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     [SerializeField] private LABPDevice labpDevice;
     [SerializeField] private GameObject rootDisableObj;
 
+
     public void SetLABPDevice(LABPDevice device)
     {
         labpDevice = device;
@@ -38,6 +39,18 @@ public class Player : MonoBehaviour
     public void SetCanPlaceStone(bool value)
     {
         canPlaceStone = value;
+    }
+
+    private bool smashEnable = true;
+    public void SetSmashEnable(bool value)
+    {
+        smashEnable = value;
+    }
+
+    private bool forcePlaceEnable = true;
+    public void SetForcePlaceEnable(bool value)
+    {
+        forcePlaceEnable = value;
     }
 
     private PlayerState currentState;
@@ -59,7 +72,7 @@ public class Player : MonoBehaviour
         // ステータスのコピーインスタンスを生成
         stateList.CreateRunTimeCopies();
 
-        canPlaceStone = true;
+        SetCanPlaceStone(true);
 
         // 初期位置・初期回転を保存
         InitializeSpawnPoint();
@@ -68,7 +81,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         //---------------------------------------------------------------
-        TurnManager.Instance.RegisterPlayer(this);
+        TurnManager.Instance?.RegisterPlayer(this);
         //---------------------------------------------------------------
 
         ChangeState(initializeStatekey);
@@ -215,27 +228,29 @@ public class Player : MonoBehaviour
             input.ForcePlace.Pressed &&
             stateList.TryGetRuntimeState("forcePlace", out var skillState) &&
             skillState is PlayerStateForcePlace forcePlaceState &&
-            forcePlaceState.CanUse(this))
+            forcePlaceState.CanUse(this)&& 
+            forcePlaceEnable)
         {
             ChangeState("forcePlace");
             return;
         }
 
+
+
         if (input.Attack != null &&
             input.Attack.Pressed &&
             stateList.TryGetRuntimeState("smash", out var attackState) &&
             attackState is PlayerStateSmash smashState &&
-            smashState.CanUse(this))
+            smashState.CanUse(this) && 
+            smashEnable)
         {
             ChangeState("smash");
             return;
         }
 
-        if (input.Place != null &&
-            input.Place.Pressed &&
-            TurnManager.Instance != null &&
-            TurnManager.Instance.IsAttackPlayer(this) &&
-            canPlaceStone)
+        if (input.Place != null 
+            && input.Place.Pressed 
+            && canPlaceStone)
         {
             ChangeState("place");
         }
@@ -326,8 +341,8 @@ public class Player : MonoBehaviour
     //プレイヤーリセット
     public void ResetBattle()
     {
-        // 石を置ける状態に戻す
-        canPlaceStone = true;
+        // �΂�u�����Ԃɖ߂�
+        SetCanPlaceStone(true);
 
         Respawn();
     }

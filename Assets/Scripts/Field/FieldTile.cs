@@ -5,6 +5,7 @@ public class FieldTile : MonoBehaviour
     [Header("Material")]
     [SerializeField] private Material defaultMaterial;
     [SerializeField] private Material highlightMaterial;
+    [SerializeField] private Material spotLightMaterial;
 
     // À•Wî•ñ
     [SerializeField]private Vector2Int coordinate;
@@ -40,7 +41,7 @@ public class FieldTile : MonoBehaviour
 
         MatchCount count = FieldManager.Instance.CheckMatch(this.coordinate);
 
-        FieldCamera.Instance.CameraShake(0.1f, 0.2f);
+        FieldCamera.Instance?.CameraShake(0.1f, 0.2f);
 
         if (count.lineDir_x1_y0 >= MATCH_COUNT)
         {
@@ -112,6 +113,14 @@ public class FieldTile : MonoBehaviour
             FieldManager.Instance.SubtractStoneCount();
             Destroy(PutedStone.gameObject);
             PutedStone = null;
+        }
+    }
+
+    public void SetSpotLightMaterial()
+    {
+        if (spotLightMaterial != null)
+        {
+            this.gameObject.GetComponent<MeshRenderer>().material = spotLightMaterial;
         }
     }
 }

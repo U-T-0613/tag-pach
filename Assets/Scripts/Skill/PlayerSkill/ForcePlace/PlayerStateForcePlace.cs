@@ -1,3 +1,4 @@
+using System.Xml.Serialization;
 using UnityEngine;
 
 [CreateAssetMenu(
@@ -35,6 +36,12 @@ public class PlayerStateForcePlace : PlayerState
     {
         TurnManager turn = TurnManager.Instance;
 
+        if(TutorialManager.Instance != null)
+        {
+            Debug.Log("TutorialManagerが存在するため、強制配置スキルを使用可能とする");
+            return true;
+        }
+
         return player != null &&
             player.isActiveAndEnabled &&
             settings != null &&
@@ -62,7 +69,7 @@ public class PlayerStateForcePlace : PlayerState
             return;
         }
 
-        activeTurn = TurnManager.Instance.GetTurnCount();
+        //activeTurn = TurnManager.Instance?.GetTurnCount() ?? -1;
 
         // ステート終了後も再使用時刻を保持する。
         nextUseTime = Time.time + settings.CooldownTime;
@@ -102,15 +109,15 @@ public class PlayerStateForcePlace : PlayerState
             return;
         }
 
-        TurnManager turn = TurnManager.Instance;
+        //TurnManager turn = TurnManager.Instance;
+        //
+        //if (!IsActiveTurn(turn) && TutorialManager.Instance == null)
+        //{
+        //    owner.ChangeState("idle");
+        //    return;
+        //}
 
-        if (!IsActiveTurn(turn))
-        {
-            owner.ChangeState("idle");
-            return;
-        }
-
-        if (Time.timeScale <= 0f || turn.IsBattlePaused())
+        if (Time.timeScale <= 0f)
         {
             return;
         }
@@ -159,6 +166,11 @@ public class PlayerStateForcePlace : PlayerState
         // 攻撃判定を1回だけ実行
         ExecuteHit();
 
+        if (TutorialManager.Instance != null)
+        {
+            ExecuteDummyAttack();
+        }
+
         // 命中・空振りにかかわらずENDへ移行
         currentPhase = ForcePlaceState.End;
         phaseTimer = settings.EndDuration;
@@ -203,20 +215,20 @@ public class PlayerStateForcePlace : PlayerState
             opponent == null ||
             opponent == owner ||
             !opponent.isActiveAndEnabled ||
-            !IsInHitRange(opponent))
+            !IsInHitRange(opponent.gameObject))
         {
             return false;
         }
 
-        TurnManager turn = TurnManager.Instance;
-
-        if (!IsActiveTurn(turn) ||
-            turn.IsBattlePaused() ||
-            Time.timeScale <= 0f ||
-            turn.GetAttackPlayer() != opponent)
-        {
-            return false;
-        }
+        //TurnManager turn = TurnManager.Instance;
+        //
+        //if (!IsActiveTurn(turn) ||
+        //    turn.IsBattlePaused() ||
+        //    Time.timeScale <= 0f ||
+        //    turn.GetAttackPlayer() != opponent)
+        //{
+        //    return false;
+        //}
 
         resolvingHit = true;
 
@@ -246,7 +258,7 @@ public class PlayerStateForcePlace : PlayerState
                turn.GetDefendPlayer() == owner;
     }
 
-    private bool IsInHitRange(Player opponent)
+    private bool IsInHitRange(GameObject opponent)
     {
         if (opponent == null || owner == null)
         {
@@ -285,22 +297,37 @@ public class PlayerStateForcePlace : PlayerState
             return;
         }
 
-        TurnManager turn = TurnManager.Instance;
+        //TurnManager turn = TurnManager.Instance;
+        //
+        //if (!IsActiveTurn(turn) ||
+        //    turn.IsBattlePaused() ||
+        //    Time.timeScale <= 0f)
+        //{
+        //    return;
+        //}
+        //
+        //Player opponent = turn.GetAttackPlayer();
+        //
+        //if (opponent == null)
+        //{
+        //    return;
+        //}
+        //
+        //TryHit(opponent);
+    }
 
-        if (!IsActiveTurn(turn) ||
-            turn.IsBattlePaused() ||
-            Time.timeScale <= 0f)
+    private void ExecuteDummyAttack()
+    {
+        // ダミーの探索
+        Dummy_Player[] dummies = GameObject.FindObjectsByType<Dummy_Player>();
+
+        foreach(var target in dummies)
         {
-            return;
+            if (IsInHitRange(target.gameObject))
+            {
+                target.HitAttack(owner);
+            }
         }
 
-        Player opponent = turn.GetAttackPlayer();
-
-        if (opponent == null)
-        {
-            return;
-        }
-
-        TryHit(opponent);
     }
 }
