@@ -53,6 +53,8 @@ public class Stone : MonoBehaviour
 
     private Material defaultMaterial;
 
+    private bool holo = false;
+
     public float CurrentProg { get; private set; } = 0f;
     public bool IsTransitioning => isTransitioning;
 
@@ -241,18 +243,29 @@ public class Stone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        foreach (var renderer in holoMesh)
-        {
-            renderer.material = holoMaterial;
-        }
+        SetHolo(true);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        foreach (var renderer in holoMesh)
+        // 回転中はホログラムを解除しない
+        if (FieldEventManager.Instance != null &&
+            FieldEventManager.Instance.IsRotating)
         {
-            renderer.material = defaultMaterial;
+            return;
         }
+
+        SetHolo(false);
     }
 
+    public void SetHolo(bool active)
+    {
+        holo = active;
+
+        foreach (var renderer in holoMesh)
+        {
+            renderer.material =
+                holo ? holoMaterial : defaultMaterial;
+        }
+    }
 }

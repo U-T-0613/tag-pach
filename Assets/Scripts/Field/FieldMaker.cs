@@ -325,6 +325,10 @@ public class FieldMaker : MonoBehaviour
         GenerateField();
     }
 
+    public float GetFieldSpacing()
+    {
+        return fieldSpacing;
+    }
     private void QueueGenerateField()
     {
 #if UNITY_EDITOR
