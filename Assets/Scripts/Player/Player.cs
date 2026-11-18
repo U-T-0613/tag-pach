@@ -133,10 +133,26 @@ public class Player : MonoBehaviour
             return;
         }
 
+        // CanUseが必要なStateだけチェック
+        if (newState is PlayerStateForcePlace forcePlace &&
+            !forcePlace.CanUse(this))
+        {
+            Debug.LogError("ForcePlace state CanUse is false ");
+            return;
+        }
+
+        if (newState is PlayerStateSmash smash &&
+            !smash.CanUse(this))
+        {
+            Debug.LogError("Smash state CanUse is false ");
+            return;
+        }
+
         if (currentState != null)
         {
             currentState.ExitState();
         }
+
         currentState = newState;
         currentState.EnterState(this, input);
     }
@@ -225,10 +241,7 @@ public class Player : MonoBehaviour
         }
 
         if (input.ForcePlace != null &&
-            input.ForcePlace.Pressed &&
-            stateList.TryGetRuntimeState("forcePlace", out var skillState) &&
-            skillState is PlayerStateForcePlace forcePlaceState &&
-            forcePlaceState.CanUse(this)&& 
+            input.ForcePlace.Pressed && 
             forcePlaceEnable)
         {
             ChangeState("forcePlace");
@@ -239,9 +252,6 @@ public class Player : MonoBehaviour
 
         if (input.Attack != null &&
             input.Attack.Pressed &&
-            stateList.TryGetRuntimeState("smash", out var attackState) &&
-            attackState is PlayerStateSmash smashState &&
-            smashState.CanUse(this) && 
             smashEnable)
         {
             ChangeState("smash");

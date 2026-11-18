@@ -24,7 +24,6 @@ public class PlayerStateForcePlace : PlayerState
 
     private float nextUseTime;
     private int lastUseFrame = -1;
-    private int activeTurn;
     private bool resolvingHit;
     private bool skillActive;
     private GameObject skillVisual;
@@ -34,42 +33,39 @@ public class PlayerStateForcePlace : PlayerState
 
     public bool CanUse(Player player)
     {
-        TurnManager turn = TurnManager.Instance;
-
-        if(TutorialManager.Instance != null)
+        // 共通条件
+        if (player == null ||
+            !player.isActiveAndEnabled ||
+            settings == null ||
+            !settings.IsValid ||
+            Time.timeScale <= 0f ||
+            Time.time < nextUseTime ||
+            lastUseFrame == Time.frameCount)
         {
-            Debug.Log("TutorialManagerが存在するため、強制配置スキルを使用可能とする");
+            return false;
+        }
+
+        // チュートリアル
+        if (TutorialManager.Instance != null)
+        {
             return true;
         }
 
-        return player != null &&
-            player.isActiveAndEnabled &&
-            settings != null &&
-            settings.IsValid &&
-            Time.timeScale > 0f &&
-            Time.time >= nextUseTime &&
-            lastUseFrame != Time.frameCount &&
-            turn != null &&
-            turn.IsBattleStarted() &&
-            !turn.IsBattlePaused() &&
-            turn.GetCurrentStateType() == TurnStateType.Playing &&
-            turn.GetDefendPlayer() == player &&
-            turn.GetAttackPlayer() != null;
+        // 通常戦闘
+        TurnManager turn = TurnManager.Instance;
 
+        return turn != null &&
+               turn.IsBattleStarted() &&
+               !turn.IsBattlePaused() &&
+               turn.GetCurrentStateType() == TurnStateType.Playing &&
+               turn.GetDefendPlayer() == player &&
+               turn.GetAttackPlayer() != null;
     }
 
     public override void EnterState(Player owner,PlayerInputReader input)
     {
         base.EnterState(owner, input);
         Debug.Log("強制配置ステートに入った", owner);
-
-        if (!CanUse(owner))
-        {
-            owner.ChangeState("idle");
-            return;
-        }
-
-        //activeTurn = TurnManager.Instance?.GetTurnCount() ?? -1;
 
         // ステート終了後も再使用時刻を保持する。
         nextUseTime = Time.time + settings.CooldownTime;
@@ -108,14 +104,6 @@ public class PlayerStateForcePlace : PlayerState
         {
             return;
         }
-
-        //TurnManager turn = TurnManager.Instance;
-        //
-        //if (!IsActiveTurn(turn) && TutorialManager.Instance == null)
-        //{
-        //    owner.ChangeState("idle");
-        //    return;
-        //}
 
         if (Time.timeScale <= 0f)
         {
@@ -164,7 +152,10 @@ public class PlayerStateForcePlace : PlayerState
         }
 
         // 攻撃判定を1回だけ実行
-        ExecuteHit();
+        if (TurnManager.Instance != null) 
+        {
+            ExecuteHit();
+        }
 
         if (TutorialManager.Instance != null)
         {
@@ -209,9 +200,7 @@ public class PlayerStateForcePlace : PlayerState
 
     public bool TryHit(Player opponent)
     {
-        if (!skillActive ||
-            currentPhase != ForcePlaceState.Activate ||
-            resolvingHit ||
+        if (resolvingHit ||
             opponent == null ||
             opponent == owner ||
             !opponent.isActiveAndEnabled ||
@@ -219,16 +208,6 @@ public class PlayerStateForcePlace : PlayerState
         {
             return false;
         }
-
-        //TurnManager turn = TurnManager.Instance;
-        //
-        //if (!IsActiveTurn(turn) ||
-        //    turn.IsBattlePaused() ||
-        //    Time.timeScale <= 0f ||
-        //    turn.GetAttackPlayer() != opponent)
-        //{
-        //    return false;
-        //}
 
         resolvingHit = true;
 
@@ -239,7 +218,7 @@ public class PlayerStateForcePlace : PlayerState
                 return false;
             }
 
-            Debug.Log("ForcePlace命中：相手の駒を強制配置",owner);
+            Debug.Log("ForcePlace命中：相手の駒を強制配置", owner);
 
             return true;
         }
@@ -247,15 +226,6 @@ public class PlayerStateForcePlace : PlayerState
         {
             resolvingHit = false;
         }
-    }
-
-    private bool IsActiveTurn(TurnManager turn)
-    {
-        return turn != null &&
-               turn.IsBattleStarted() &&
-               turn.GetCurrentStateType() == TurnStateType.Playing &&
-               turn.GetTurnCount() == activeTurn &&
-               turn.GetDefendPlayer() == owner;
     }
 
     private bool IsInHitRange(GameObject opponent)
@@ -289,31 +259,16 @@ public class PlayerStateForcePlace : PlayerState
     // 攻撃判定を実行
     public void ExecuteHit()
     {
-        if (!skillActive ||
-            currentPhase != ForcePlaceState.Activate ||
-            owner == null ||
-            settings == null)
+        TurnManager turn = TurnManager.Instance;
+
+        if (turn == null)
         {
             return;
         }
 
-        //TurnManager turn = TurnManager.Instance;
-        //
-        //if (!IsActiveTurn(turn) ||
-        //    turn.IsBattlePaused() ||
-        //    Time.timeScale <= 0f)
-        //{
-        //    return;
-        //}
-        //
-        //Player opponent = turn.GetAttackPlayer();
-        //
-        //if (opponent == null)
-        //{
-        //    return;
-        //}
-        //
-        //TryHit(opponent);
+        Player opponent = turn.GetAttackPlayer();
+
+        TryHit(opponent);
     }
 
     private void ExecuteDummyAttack()
