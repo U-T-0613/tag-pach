@@ -84,6 +84,9 @@ public class Tutorial_rule : TutorialState
                 Mission.Instance.DisplayMission("é©ï™ÇÃêFÇÃãÓÇ5å¬ï¿Ç◊ÇÈ");
                 ChangeStep(TutorialStep.Step3);
 
+                mag_matched = false;
+                osh_matched = false;
+
                 tutorialManager.GetPlayerMag().SetCanPlaceStone(true);
                 tutorialManager.GetPlayerOsh().SetCanPlaceStone(true);
 
@@ -134,7 +137,8 @@ public class Tutorial_rule : TutorialState
                 else if ((tgtTile[2].PutedStone != null) && (tgtTile[2].PutedStone.Owner == tutorialManager.GetPlayerOsh()) ||
                 (tgtTile[3].PutedStone != null) && (tgtTile[3].PutedStone.Owner == tutorialManager.GetPlayerOsh()))
                 {
-                    mag_matched = true;
+                    Dialogue.Instance.DisplayDialogue(failedDialogue);
+                    ChangeStep(TutorialStep.Step5);
                 }
 
                 if (osh_matched && mag_matched)
