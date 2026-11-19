@@ -121,7 +121,7 @@ public class Tutorial_rule : TutorialState
                 {
                     osh_matched = true;
                 }
-                else if ((tgtTile[0].PutedStone != null) && (tgtTile[0].PutedStone.Owner == tutorialManager.GetPlayerMag()) ||
+                else if ((tgtTile[0].PutedStone != null) && (tgtTile[0].PutedStone.Owner == tutorialManager.GetPlayerMag()) &&
                          (tgtTile[1].PutedStone != null) && (tgtTile[1].PutedStone.Owner == tutorialManager.GetPlayerMag()))
                 {
                     Dialogue.Instance.DisplayDialogue(failedDialogue);
@@ -134,7 +134,7 @@ public class Tutorial_rule : TutorialState
                 {
                     mag_matched = true;
                 }
-                else if ((tgtTile[2].PutedStone != null) && (tgtTile[2].PutedStone.Owner == tutorialManager.GetPlayerOsh()) ||
+                else if ((tgtTile[2].PutedStone != null) && (tgtTile[2].PutedStone.Owner == tutorialManager.GetPlayerOsh()) &&
                 (tgtTile[3].PutedStone != null) && (tgtTile[3].PutedStone.Owner == tutorialManager.GetPlayerOsh()))
                 {
                     Dialogue.Instance.DisplayDialogue(failedDialogue);
