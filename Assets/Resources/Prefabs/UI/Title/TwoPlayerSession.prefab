@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControllerSessionManager
   bindingMode: 1
+  registrationSettings: {fileID: 11400000, guid: 932b15e89fed25e4c8b79fa3f526a8fc, type: 2}

@@ -62,7 +62,7 @@ public sealed class TitleSceneController : MonoBehaviour
 
     public void StartTwoPlayerGame()
     {
-        StartGame(twoPlayerSessionPrefab, ControllerBindingMode.TwoControllersTest);
+        StartGame(twoPlayerSessionPrefab, ControllerBindingMode.TwoControllers);
     }
 
     public void StartFourPlayerGame()
@@ -96,18 +96,14 @@ public sealed class TitleSceneController : MonoBehaviour
     private IEnumerator LoadRegistrationScene(ControllerSessionManager sessionPrefab)
     {
         ControllerSessionManager session = ControllerSessionManager.Instance;
-        if (session != null && session.BindingMode != sessionPrefab.BindingMode)
-        {
-            // Singletonの破棄完了後に生成し、以前の人数設定を引き継がないようにする。
-            Destroy(session.gameObject);
-            yield return null;
-            session = null;
-        }
-
         if (session == null)
             session = Instantiate(sessionPrefab);
 
-        session.ClearRegistration();
+        if (session.BindingMode != sessionPrefab.BindingMode)
+            session.SetBindingMode(sessionPrefab.BindingMode);
+        else
+            session.AutoRegisterConnectedDevices();
+        session.ResetAllReadyStates();
         if (TeamPlayerAssignmentManager.Instance != null)
             TeamPlayerAssignmentManager.Instance.ResetAssignments();
 
