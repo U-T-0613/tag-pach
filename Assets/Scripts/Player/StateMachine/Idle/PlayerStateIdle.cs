@@ -13,7 +13,7 @@ public class PlayerStateIdle : PlayerState
         base.UpdateState();
 
         // バトル開始演出中は移動禁止
-        if (IsBattleStart())
+        if (owner.IsBattleStart())
         {
             return;
         }
@@ -33,12 +33,5 @@ public class PlayerStateIdle : PlayerState
     public override void ExitState()
     {
         base.ExitState();
-    }
-
-    public bool IsBattleStart()
-    {
-        return TurnManager.Instance != null &&
-               TurnManager.Instance.GetCurrentStateType()
-                   == TurnStateType.BattleStart;
     }
 }
