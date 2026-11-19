@@ -232,6 +232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 3, y: 0}
 --- !u!65 &26180928
@@ -361,6 +362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 3, y: 6}
 --- !u!65 &38839508
@@ -490,6 +492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 4, y: 7}
 --- !u!65 &56673098
@@ -570,6 +573,82 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 56673095}
   m_Mesh: {fileID: 4068373912626513877, guid: 3d69beacd209d6249ad12326534eb720, type: 3}
+--- !u!1 &82379424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 82379427}
+  - component: {fileID: 82379426}
+  - component: {fileID: 82379425}
+  m_Layer: 0
+  m_Name: MessagePanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &82379425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82379424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5019608}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &82379426
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82379424}
+  m_CullTransparentMesh: 1
+--- !u!224 &82379427
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82379424}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 239991804}
+  m_Father: {fileID: 368213142}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 50}
+  m_SizeDelta: {x: 0, y: 180}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &92805579
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,7 +678,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
   m_IgnoreReversedGraphics: 1
   m_BlockingObjects: 0
@@ -616,7 +695,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
@@ -720,7 +799,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
@@ -797,6 +876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 2, y: 2}
 --- !u!65 &114803114
@@ -924,7 +1004,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
@@ -1001,6 +1081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 7, y: 5}
 --- !u!65 &136010554
@@ -1130,6 +1211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 11, y: 5}
 --- !u!65 &148641340
@@ -1259,6 +1341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 1, y: 3}
 --- !u!65 &151427220
@@ -1386,7 +1469,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0.6679245, g: 0.6679245, b: 0.6679245, a: 0.19607843}
@@ -1461,7 +1544,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1600,6 +1683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 2, y: 6}
 --- !u!65 &206871282
@@ -1727,7 +1811,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1862,10 +1946,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2d509b866a35b248800aa6708fdf1aa, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 5, y: 4}
 --- !u!65 &225723105
@@ -1946,6 +2031,119 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225723102}
   m_Mesh: {fileID: 4068373912626513877, guid: 3d69beacd209d6249ad12326534eb720, type: 3}
+--- !u!1 &226220518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 226220522}
+  - component: {fileID: 226220521}
+  - component: {fileID: 226220520}
+  - component: {fileID: 226220519}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &226220519
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226220518}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &226220520
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226220518}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &226220521
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226220518}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &226220522
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226220518}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11, y: -0.1, z: 0}
+  m_LocalScale: {x: 5.9227, y: 1, z: 4.9546}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &236735049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,6 +2193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 0, y: 3}
 --- !u!65 &236735052
@@ -2075,6 +2274,143 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236735049}
   m_Mesh: {fileID: 4068373912626513877, guid: 3d69beacd209d6249ad12326534eb720, type: 3}
+--- !u!1 &239991801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 239991804}
+  - component: {fileID: 239991803}
+  - component: {fileID: 239991802}
+  m_Layer: 0
+  m_Name: StartMessageText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &239991802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239991801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "\u81EA\u5206\u306E\u30C1\u30FC\u30E0\u306E\u99D2\u30925\u3064\u4E26\u3079\u305F\u3089\u52DD\u3061\uFF01"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 2b9823ec39fb8ca49b73daae5f875740, type: 2}
+  m_sharedMaterial: {fileID: -6974920131008983956, guid: 2b9823ec39fb8ca49b73daae5f875740, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 64
+  m_fontSizeBase: 64
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &239991803
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239991801}
+  m_CullTransparentMesh: 1
+--- !u!224 &239991804
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239991801}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 82379427}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1600, y: 300}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &284215219
 GameObject:
   m_ObjectHideFlags: 0
@@ -2127,7 +2463,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67d38c8040260fc48b102fbd9f401670, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateSkillUI
   background: {fileID: 882146092}
   iconText: {fileID: 2061734463}
@@ -2198,7 +2534,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
@@ -2275,6 +2611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 6, y: 6}
 --- !u!65 &320025754
@@ -2404,6 +2741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 7, y: 1}
 --- !u!65 &329903677
@@ -2697,7 +3035,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2836,6 +3174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 10, y: 7}
 --- !u!65 &364218990
@@ -2916,6 +3255,129 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364218987}
   m_Mesh: {fileID: 4068373912626513877, guid: 3d69beacd209d6249ad12326534eb720, type: 3}
+--- !u!1 &368213137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 368213142}
+  - component: {fileID: 368213141}
+  - component: {fileID: 368213140}
+  - component: {fileID: 368213139}
+  - component: {fileID: 368213138}
+  m_Layer: 0
+  m_Name: GameStartCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &368213138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368213137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66db18d138cbc42488ec5cf84204e097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameStartUI
+  messageText: {fileID: 239991802}
+  messageRoot: {fileID: 82379424}
+  ruleMessage: "\u81EA\u5206\u306E\u30C1\u30FC\u30E0\u306E\u99D2\u30925\u3064\u4E26\u3079\u305F\u3089\u52DD\u3061\uFF01"
+  startMessage: "\u30B9\u30BF\u30FC\u30C8\uFF01"
+  initialDelay: 0.5
+  ruleDuration: 3
+  startDuration: 0.8
+--- !u!114 &368213139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368213137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &368213140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368213137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0.5
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &368213141
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368213137}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_UseReflectionProbes: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 100
+  m_TargetDisplay: 0
+--- !u!224 &368213142
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368213137}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 82379427}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &380092448
 GameObject:
   m_ObjectHideFlags: 0
@@ -2963,7 +3425,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3113,6 +3575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 6, y: 0}
 --- !u!65 &395310915
@@ -3242,6 +3705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 0, y: 1}
 --- !u!65 &401047589
@@ -3371,6 +3835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 8, y: 2}
 --- !u!65 &403856621
@@ -3737,6 +4202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 1, y: 0}
 --- !u!65 &418418708
@@ -3864,7 +4330,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
@@ -3939,7 +4405,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4076,10 +4542,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2d509b866a35b248800aa6708fdf1aa, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
+  holoMaterial: {fileID: 0}
   coordinate: {x: 10, y: 1}
 --- !u!65 &449916947
 BoxCollider:
@@ -4208,6 +4676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 1, y: 4}
 --- !u!65 &457802399
@@ -4337,6 +4806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 4, y: 5}
 --- !u!65 &466592119
@@ -4466,6 +4936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 2, y: 0}
 --- !u!65 &467967271
@@ -4713,6 +5184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 6, y: 7}
 --- !u!65 &479964997
@@ -4840,7 +5312,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
@@ -4917,6 +5389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 5, y: 7}
 --- !u!65 &509236354
@@ -5077,6 +5550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 8, y: 6}
 --- !u!65 &576414073
@@ -5314,6 +5788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 1, y: 5}
 --- !u!65 &620443293
@@ -5443,6 +5918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 0, y: 7}
 --- !u!65 &621756817
@@ -5674,6 +6150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 6, y: 3}
 --- !u!65 &653653286
@@ -5801,7 +6278,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6046,7 +6523,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6191,7 +6668,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acd75e6be23c58b48b5993c6419ca188, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SearchSkillUI
   background: {fileID: 419512653}
   iconText: {fileID: 1537851028}
@@ -6214,7 +6691,6 @@ MonoBehaviour:
   recoveryFlashAlpha: 1
   flashDuration: 0.3
   searchSkill: {fileID: 1234499479}
-  searchSettings: {fileID: 11400000, guid: 3acd0a955ae1d81479bd875c8801a2e1, type: 2}
 --- !u!1 &751356646
 GameObject:
   m_ObjectHideFlags: 0
@@ -6260,10 +6736,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2d509b866a35b248800aa6708fdf1aa, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
+  holoMaterial: {fileID: 0}
   coordinate: {x: 6, y: 2}
 --- !u!65 &751356649
 BoxCollider:
@@ -6392,6 +6870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 3, y: 7}
 --- !u!65 &759357905
@@ -6521,6 +7000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 2, y: 3}
 --- !u!65 &779920744
@@ -6650,6 +7130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 2, y: 5}
 --- !u!65 &793368930
@@ -6881,6 +7362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 10, y: 0}
 --- !u!65 &838987609
@@ -7013,7 +7495,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67d38c8040260fc48b102fbd9f401670, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateSkillUI
   background: {fileID: 286926299}
   iconText: {fileID: 1941081995}
@@ -7086,6 +7568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 1, y: 2}
 --- !u!65 &851974440
@@ -7215,6 +7698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 4, y: 2}
 --- !u!65 &852737501
@@ -7344,6 +7828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 7, y: 4}
 --- !u!65 &875457008
@@ -7473,6 +7958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 11, y: 2}
 --- !u!65 &880433144
@@ -7600,7 +8086,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
@@ -7637,7 +8123,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45ee9485d3da0084c8206cd172fb999e, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SearchSkill
 --- !u!1 &924150925
 GameObject:
@@ -7686,7 +8172,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7825,6 +8311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 4, y: 4}
 --- !u!65 &951337623
@@ -7954,6 +8441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 10, y: 2}
 --- !u!65 &952393194
@@ -8083,6 +8571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 0, y: 2}
 --- !u!65 &981279519
@@ -8210,7 +8699,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8347,7 +8836,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0.6679245, g: 0.6679245, b: 0.6679245, a: 0.19607843}
@@ -8404,7 +8893,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 256f5c78b061d2a45870348d65b13ae3, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FieldMaker
   field: {fileID: 4150240117445195069, guid: a27d8e54e716da74791ca56e4f4225e3, type: 3}
   barrierBlock: {fileID: 5790025888943519115, guid: c4d39ae418bd90a499d6bb489f69dbbf, type: 3}
@@ -8415,13 +8904,13 @@ MonoBehaviour:
   savedPattern:
   - HasData: 0
     Size: {x: 0, y: 0}
-    EnableCell:
+    EnableCell: 
   - HasData: 0
     Size: {x: 0, y: 0}
-    EnableCell:
+    EnableCell: 
   - HasData: 0
     Size: {x: 0, y: 0}
-    EnableCell:
+    EnableCell: 
   generatedRoot: {fileID: 2113868315}
 --- !u!4 &997618646
 Transform:
@@ -8449,7 +8938,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb8f31cc6150ec9489d6750211d07b1c, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FieldManager
   removeInterval: 0.1
   removeStartDelay: 1.5
@@ -8515,6 +9004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 4, y: 3}
 --- !u!65 &1028379713
@@ -8642,7 +9132,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0.6679245, g: 0.6679245, b: 0.6679245, a: 0.19607843}
@@ -8719,6 +9209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 9, y: 6}
 --- !u!65 &1075700134
@@ -8848,6 +9339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 11, y: 4}
 --- !u!65 &1089270594
@@ -8977,6 +9469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 7, y: 2}
 --- !u!65 &1094305740
@@ -9106,6 +9599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 5, y: 3}
 --- !u!65 &1094784678
@@ -9362,6 +9856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 0, y: 0}
 --- !u!65 &1164134037
@@ -9489,7 +9984,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -9628,7 +10123,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -9769,6 +10264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 10, y: 4}
 --- !u!65 &1205728427
@@ -9896,7 +10392,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -9995,7 +10491,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45ee9485d3da0084c8206cd172fb999e, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SearchSkill
 --- !u!1 &1247052892
 GameObject:
@@ -10042,10 +10538,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2d509b866a35b248800aa6708fdf1aa, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
+  holoMaterial: {fileID: 0}
   coordinate: {x: 11, y: 3}
 --- !u!65 &1247052895
 BoxCollider:
@@ -10174,6 +10672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 5, y: 0}
 --- !u!65 &1247621284
@@ -10303,6 +10802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 3, y: 4}
 --- !u!65 &1256540765
@@ -10430,7 +10930,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -10569,6 +11069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 5, y: 2}
 --- !u!65 &1282852436
@@ -10696,7 +11197,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
@@ -10771,7 +11272,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
@@ -10848,6 +11349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 0, y: 5}
 --- !u!65 &1303118693
@@ -10977,6 +11479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 7, y: 3}
 --- !u!65 &1311825288
@@ -11106,6 +11609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 4, y: 0}
 --- !u!65 &1321940496
@@ -11186,6 +11690,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321940493}
   m_Mesh: {fileID: 4068373912626513877, guid: 3d69beacd209d6249ad12326534eb720, type: 3}
+--- !u!1001 &1329969855
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7035708958295403840, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
+      propertyPath: m_Name
+      value: 'GameSystem '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115692422430111648, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115692422430111648, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115692422430111648, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115692422430111648, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115692422430111648, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115692422430111648, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115692422430111648, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115692422430111648, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115692422430111648, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115692422430111648, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
 --- !u!1 &1333442048
 GameObject:
   m_ObjectHideFlags: 0
@@ -11235,6 +11796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 1, y: 1}
 --- !u!65 &1333442051
@@ -11364,6 +11926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 6, y: 5}
 --- !u!65 &1335349492
@@ -11491,7 +12054,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
@@ -11568,6 +12131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 1, y: 7}
 --- !u!65 &1350063283
@@ -11695,7 +12259,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0.6679245, g: 0.6679245, b: 0.6679245, a: 0.19607843}
@@ -11877,6 +12441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 10, y: 5}
 --- !u!65 &1356746037
@@ -12006,6 +12571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 9, y: 3}
 --- !u!65 &1361649748
@@ -12135,6 +12701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 0, y: 4}
 --- !u!65 &1363174113
@@ -12262,7 +12829,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -12401,6 +12968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 7, y: 7}
 --- !u!65 &1377111614
@@ -12530,6 +13098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 9, y: 5}
 --- !u!65 &1398740995
@@ -12657,7 +13226,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
@@ -12734,6 +13303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 4, y: 1}
 --- !u!65 &1416720120
@@ -12863,6 +13433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 7, y: 0}
 --- !u!65 &1418693798
@@ -13106,6 +13677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 2, y: 4}
 --- !u!65 &1431645985
@@ -13266,6 +13838,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 9, y: 1}
 --- !u!65 &1436699639
@@ -13395,6 +13968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 0, y: 6}
 --- !u!65 &1467774270
@@ -13524,6 +14098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 7, y: 6}
 --- !u!65 &1483402658
@@ -13656,7 +14231,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67d38c8040260fc48b102fbd9f401670, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateSkillUI
   background: {fileID: 1344653606}
   iconText: {fileID: 189287001}
@@ -13794,6 +14369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 9, y: 7}
 --- !u!65 &1512879207
@@ -13921,7 +14497,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -14060,6 +14636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 11, y: 1}
 --- !u!65 &1551889056
@@ -14193,7 +14770,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acd75e6be23c58b48b5993c6419ca188, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SearchSkillUI
   background: {fileID: 135442237}
   iconText: {fileID: 380092450}
@@ -14216,7 +14793,6 @@ MonoBehaviour:
   recoveryFlashAlpha: 1
   flashDuration: 0.3
   searchSkill: {fileID: 913510913}
-  searchSettings: {fileID: 11400000, guid: 3acd0a955ae1d81479bd875c8801a2e1, type: 2}
 --- !u!1 &1560900776
 GameObject:
   m_ObjectHideFlags: 0
@@ -14266,6 +14842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 3, y: 5}
 --- !u!65 &1560900779
@@ -14395,6 +14972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 6, y: 1}
 --- !u!65 &1563006937
@@ -14524,6 +15102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 8, y: 3}
 --- !u!65 &1631310189
@@ -14653,6 +15232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 3, y: 1}
 --- !u!65 &1633180889
@@ -14780,7 +15360,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -14919,7 +15499,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
@@ -14992,10 +15572,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2d509b866a35b248800aa6708fdf1aa, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
+  holoMaterial: {fileID: 0}
   coordinate: {x: 11, y: 6}
 --- !u!65 &1690522236
 BoxCollider:
@@ -15124,6 +15706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 5, y: 1}
 --- !u!65 &1704000642
@@ -15253,6 +15836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 5, y: 5}
 --- !u!65 &1705614559
@@ -15382,6 +15966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 8, y: 5}
 --- !u!65 &1709269797
@@ -15511,6 +16096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 2, y: 1}
 --- !u!65 &1731552006
@@ -15640,6 +16226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 6, y: 4}
 --- !u!65 &1733666615
@@ -15769,6 +16356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 1, y: 6}
 --- !u!65 &1746566628
@@ -15898,6 +16486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 8, y: 7}
 --- !u!65 &1788661947
@@ -16025,7 +16614,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0.6679245, g: 0.6679245, b: 0.6679245, a: 0.19607843}
@@ -16133,6 +16722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 2, y: 7}
 --- !u!65 &1828899334
@@ -16262,6 +16852,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 8, y: 0}
 --- !u!65 &1830433398
@@ -16391,6 +16982,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 8, y: 4}
 --- !u!65 &1840170362
@@ -16520,6 +17112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 9, y: 4}
 --- !u!65 &1847141989
@@ -16649,6 +17242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 3, y: 3}
 --- !u!65 &1880333916
@@ -16776,7 +17370,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0.6679245, g: 0.6679245, b: 0.6679245, a: 0.19607843}
@@ -16853,6 +17447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 9, y: 0}
 --- !u!65 &1924095255
@@ -16982,6 +17577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 10, y: 6}
 --- !u!65 &1930867418
@@ -17109,7 +17705,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -17251,7 +17847,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67d38c8040260fc48b102fbd9f401670, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateSkillUI
   background: {fileID: 2074293208}
   iconText: {fileID: 362469288}
@@ -17324,6 +17920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 5, y: 6}
 --- !u!65 &1949250219
@@ -17453,6 +18050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 11, y: 7}
 --- !u!65 &1956627878
@@ -17582,6 +18180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 8, y: 1}
 --- !u!65 &1980028092
@@ -17711,6 +18310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 3, y: 2}
 --- !u!65 &2002967209
@@ -17956,7 +18556,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -18093,7 +18693,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -18183,75 +18783,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026155903}
   m_CullTransparentMesh: 1
---- !u!1001 &2037192936
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4494056337638187979, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
-      propertyPath: managerConfigs.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4494056337638187979, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
-      propertyPath: managerConfigs.Array.data[4].managerName
-      value: BonbFeaverManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 4494056337638187979, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
-      propertyPath: managerConfigs.Array.data[4].managerPrefab
-      value:
-      objectReference: {fileID: 2610677158045485901, guid: 3ba380e0e07de504c919f00e42563b09, type: 3}
-    - target: {fileID: 7035708958295403840, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
-      propertyPath: m_Name
-      value: GameSystem
-      objectReference: {fileID: 0}
-    - target: {fileID: 7115692422430111648, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7115692422430111648, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7115692422430111648, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7115692422430111648, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7115692422430111648, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7115692422430111648, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7115692422430111648, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7115692422430111648, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7115692422430111648, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7115692422430111648, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6e5aa836a74b70b4abda35404255ed35, type: 3}
 --- !u!1 &2044647732
 GameObject:
   m_ObjectHideFlags: 0
@@ -18301,6 +18832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 4, y: 6}
 --- !u!65 &2044647735
@@ -18481,7 +19013,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -18697,7 +19229,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
@@ -18774,6 +19306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 11, y: 0}
 --- !u!65 &2074973993
@@ -19034,6 +19567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 9, y: 2}
 --- !u!65 &2115420977
@@ -19163,6 +19697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  spotLightMaterial: {fileID: 0}
   holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 10, y: 3}
 --- !u!65 &2122500333
@@ -19284,342 +19819,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &82379424
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 82379427}
-  - component: {fileID: 82379426}
-  - component: {fileID: 82379425}
-  m_Layer: 0
-  m_Name: MessagePanel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &82379425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82379424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5019608}
-  m_RaycastTarget: 0
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &82379426
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82379424}
-  m_CullTransparentMesh: 1
---- !u!224 &82379427
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82379424}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 239991804}
-  m_Father: {fileID: 368213142}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 0, y: 180}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &239991801
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 239991804}
-  - component: {fileID: 239991803}
-  - component: {fileID: 239991802}
-  m_Layer: 0
-  m_Name: StartMessageText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &239991802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 239991801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: "\u81EA\u5206\u306E\u30C1\u30FC\u30E0\u306E\u99D2\u30925\u3064\u4E26\u3079\u305F\u3089\u52DD\u3061\uFF01"
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2b9823ec39fb8ca49b73daae5f875740, type: 2}
-  m_sharedMaterial: {fileID: -6974920131008983956, guid: 2b9823ec39fb8ca49b73daae5f875740, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 64
-  m_fontSizeBase: 64
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_characterHorizontalScale: 1
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &239991803
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 239991801}
-  m_CullTransparentMesh: 1
---- !u!224 &239991804
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 239991801}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 82379427}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1600, y: 300}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &368213137
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 368213142}
-  - component: {fileID: 368213141}
-  - component: {fileID: 368213140}
-  - component: {fileID: 368213139}
-  - component: {fileID: 368213138}
-  m_Layer: 0
-  m_Name: GameStartCanvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &368213138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 368213137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66db18d138cbc42488ec5cf84204e097, type: 3}
-  m_Name:
-  m_EditorClassIdentifier: Assembly-CSharp::GameStartUI
-  messageText: {fileID: 239991802}
-  messageRoot: {fileID: 82379424}
-  ruleMessage: "\u81EA\u5206\u306E\u30C1\u30FC\u30E0\u306E\u99D2\u30925\u3064\u4E26\u3079\u305F\u3089\u52DD\u3061\uFF01"
-  startMessage: "\u30B9\u30BF\u30FC\u30C8\uFF01"
-  initialDelay: 0.5
-  ruleDuration: 3
-  startDuration: 0.8
---- !u!114 &368213139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 368213137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name:
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &368213140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 368213137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name:
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &368213141
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 368213137}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_UseReflectionProbes: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 100
-  m_TargetDisplay: 0
---- !u!224 &368213142
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 368213137}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 82379427}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -19631,16 +19830,17 @@ SceneRoots:
   - {fileID: 1124165948}
   - {fileID: 617857223}
   - {fileID: 535676820}
+  - {fileID: 368213142}
   - {fileID: 92805583}
   - {fileID: 2064366559}
   - {fileID: 1356430949}
   - {fileID: 6525798}
   - {fileID: 1113472272}
   - {fileID: 997618646}
-  - {fileID: 2037192936}
+  - {fileID: 226220522}
+  - {fileID: 1329969855}
   - {fileID: 1142835343}
   - {fileID: 1511652438}
   - {fileID: 2003544254}
   - {fileID: 476023277}
   - {fileID: 1807389852}
-  - {fileID: 368213142}
