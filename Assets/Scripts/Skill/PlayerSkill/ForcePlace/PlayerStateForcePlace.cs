@@ -29,6 +29,8 @@ public class PlayerStateForcePlace : PlayerState
     private bool skillActive;
     private GameObject skillVisual;
 
+    public float CooldownTime => settings != null ? settings.CooldownTime : 0f;
+
     public float RemainingCooldown => 
         Mathf.Max(0f, nextUseTime - Time.time);
 

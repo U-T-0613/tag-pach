@@ -20,6 +20,7 @@ public class SearchSkill : MonoBehaviour
     private bool isSearching;
 
     public float RemainingCooldown => remainingCooldown;
+    public float CooldownTime => settings != null ? settings.CooldownTime : 0f;
 
     private void Awake()
     {

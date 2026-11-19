@@ -125,6 +125,13 @@ public class Player : MonoBehaviour
         stateList.DestroyRunTimeCopies();
     }
 
+    // Read-only access to this player's runtime state for skill UI.
+    public bool TryGetRuntimeState(string key, out PlayerState state)
+    {
+        state = null;
+        return stateList != null && stateList.TryGetRuntimeState(key, out state);
+    }
+
     public void ChangeState(string newStateKey)
     {
         if(!stateList.TryGetRuntimeState(newStateKey, out var newState))
