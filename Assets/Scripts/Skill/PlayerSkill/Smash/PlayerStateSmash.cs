@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(
@@ -51,6 +52,11 @@ public class PlayerStateSmash : PlayerState
             ShowAttackRange(owner);
 
             ExecuteHit();
+
+            if(TutorialManager.Instance != null)
+            {
+                ExecuteAttackDummy();
+            }
 
         }
 
@@ -154,5 +160,55 @@ public class PlayerStateSmash : PlayerState
             settings.KnockbackSpeed,
             settings.StunDuration
         );
+    }
+
+    // リュートリアル用
+    private bool TryGetDammy(Player player,out Dummy_Player[] dummy)
+    {
+
+        dummy = GameObject.FindObjectsByType<Dummy_Player>();
+
+        return dummy != null;
+    }
+
+    private void ExecuteAttackDummy()
+    {
+        if (owner == null || settings == null)
+            return;
+
+        if (!TryGetDammy(owner, out var dummy))
+            return;
+
+
+        foreach(var opponent in dummy){
+
+            Vector3 direction = opponent.transform.position - owner.transform.position;
+
+            direction.y = 0f;
+
+            Vector3 forward = owner.transform.forward;
+            forward.y = 0f;
+
+            if (forward.sqrMagnitude < MinDirectionSqrMagnitude)
+                forward = Vector3.forward;
+
+            forward.Normalize();
+
+            // 距離判定
+            if (direction.magnitude > settings.Range)
+                continue;
+
+            if (direction.sqrMagnitude < MinDirectionSqrMagnitude)
+                direction = forward;
+
+            // 角度判定
+            float angle = Vector3.Angle(forward, direction);
+
+            if (angle > settings.AttackAngle * 0.5f)
+                continue;
+
+            // ノックバック
+            opponent.HitAttack(this.owner);
+        }
     }
 }

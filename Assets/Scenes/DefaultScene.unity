@@ -232,6 +232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 3, y: 0}
 --- !u!65 &26180928
 BoxCollider:
@@ -360,6 +361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 3, y: 6}
 --- !u!65 &38839508
 BoxCollider:
@@ -488,6 +490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 4, y: 7}
 --- !u!65 &56673098
 BoxCollider:
@@ -794,6 +797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 2, y: 2}
 --- !u!65 &114803114
 BoxCollider:
@@ -997,6 +1001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 7, y: 5}
 --- !u!65 &136010554
 BoxCollider:
@@ -1125,6 +1130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 11, y: 5}
 --- !u!65 &148641340
 BoxCollider:
@@ -1253,6 +1259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 1, y: 3}
 --- !u!65 &151427220
 BoxCollider:
@@ -1593,6 +1600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 2, y: 6}
 --- !u!65 &206871282
 BoxCollider:
@@ -1858,6 +1866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 5, y: 4}
 --- !u!65 &225723105
 BoxCollider:
@@ -1986,6 +1995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 0, y: 3}
 --- !u!65 &236735052
 BoxCollider:
@@ -2265,6 +2275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 6, y: 6}
 --- !u!65 &320025754
 BoxCollider:
@@ -2393,6 +2404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 7, y: 1}
 --- !u!65 &329903677
 BoxCollider:
@@ -2824,6 +2836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 10, y: 7}
 --- !u!65 &364218990
 BoxCollider:
@@ -3100,6 +3113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 6, y: 0}
 --- !u!65 &395310915
 BoxCollider:
@@ -3228,6 +3242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 0, y: 1}
 --- !u!65 &401047589
 BoxCollider:
@@ -3356,6 +3371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 8, y: 2}
 --- !u!65 &403856621
 BoxCollider:
@@ -3721,6 +3737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 1, y: 0}
 --- !u!65 &418418708
 BoxCollider:
@@ -4191,6 +4208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 1, y: 4}
 --- !u!65 &457802399
 BoxCollider:
@@ -4319,6 +4337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 4, y: 5}
 --- !u!65 &466592119
 BoxCollider:
@@ -4447,6 +4466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 2, y: 0}
 --- !u!65 &467967271
 BoxCollider:
@@ -4693,6 +4713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 6, y: 7}
 --- !u!65 &479964997
 BoxCollider:
@@ -4896,6 +4917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 5, y: 7}
 --- !u!65 &509236354
 BoxCollider:
@@ -5055,6 +5077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 8, y: 6}
 --- !u!65 &576414073
 BoxCollider:
@@ -5291,6 +5314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 1, y: 5}
 --- !u!65 &620443293
 BoxCollider:
@@ -5419,6 +5443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 0, y: 7}
 --- !u!65 &621756817
 BoxCollider:
@@ -5649,6 +5674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 6, y: 3}
 --- !u!65 &653653286
 BoxCollider:
@@ -6366,6 +6392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 3, y: 7}
 --- !u!65 &759357905
 BoxCollider:
@@ -6494,6 +6521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 2, y: 3}
 --- !u!65 &779920744
 BoxCollider:
@@ -6622,6 +6650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 2, y: 5}
 --- !u!65 &793368930
 BoxCollider:
@@ -6852,6 +6881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 10, y: 0}
 --- !u!65 &838987609
 BoxCollider:
@@ -7056,6 +7086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 1, y: 2}
 --- !u!65 &851974440
 BoxCollider:
@@ -7184,6 +7215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 4, y: 2}
 --- !u!65 &852737501
 BoxCollider:
@@ -7312,6 +7344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 7, y: 4}
 --- !u!65 &875457008
 BoxCollider:
@@ -7440,6 +7473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 11, y: 2}
 --- !u!65 &880433144
 BoxCollider:
@@ -7791,6 +7825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 4, y: 4}
 --- !u!65 &951337623
 BoxCollider:
@@ -7919,6 +7954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 10, y: 2}
 --- !u!65 &952393194
 BoxCollider:
@@ -8047,6 +8083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 0, y: 2}
 --- !u!65 &981279519
 BoxCollider:
@@ -8478,6 +8515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 4, y: 3}
 --- !u!65 &1028379713
 BoxCollider:
@@ -8681,6 +8719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 9, y: 6}
 --- !u!65 &1075700134
 BoxCollider:
@@ -8809,6 +8848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 11, y: 4}
 --- !u!65 &1089270594
 BoxCollider:
@@ -8937,6 +8977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 7, y: 2}
 --- !u!65 &1094305740
 BoxCollider:
@@ -9065,6 +9106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 5, y: 3}
 --- !u!65 &1094784678
 BoxCollider:
@@ -9320,6 +9362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 0, y: 0}
 --- !u!65 &1164134037
 BoxCollider:
@@ -9726,6 +9769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 10, y: 4}
 --- !u!65 &1205728427
 BoxCollider:
@@ -10130,6 +10174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 5, y: 0}
 --- !u!65 &1247621284
 BoxCollider:
@@ -10258,6 +10303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 3, y: 4}
 --- !u!65 &1256540765
 BoxCollider:
@@ -10523,6 +10569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 5, y: 2}
 --- !u!65 &1282852436
 BoxCollider:
@@ -10801,6 +10848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 0, y: 5}
 --- !u!65 &1303118693
 BoxCollider:
@@ -10929,6 +10977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 7, y: 3}
 --- !u!65 &1311825288
 BoxCollider:
@@ -11057,6 +11106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 4, y: 0}
 --- !u!65 &1321940496
 BoxCollider:
@@ -11185,6 +11235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 1, y: 1}
 --- !u!65 &1333442051
 BoxCollider:
@@ -11313,6 +11364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 6, y: 5}
 --- !u!65 &1335349492
 BoxCollider:
@@ -11516,6 +11568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 1, y: 7}
 --- !u!65 &1350063283
 BoxCollider:
@@ -11824,6 +11877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 10, y: 5}
 --- !u!65 &1356746037
 BoxCollider:
@@ -11952,6 +12006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 9, y: 3}
 --- !u!65 &1361649748
 BoxCollider:
@@ -12080,6 +12135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 0, y: 4}
 --- !u!65 &1363174113
 BoxCollider:
@@ -12345,6 +12401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 7, y: 7}
 --- !u!65 &1377111614
 BoxCollider:
@@ -12473,6 +12530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 9, y: 5}
 --- !u!65 &1398740995
 BoxCollider:
@@ -12676,6 +12734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 4, y: 1}
 --- !u!65 &1416720120
 BoxCollider:
@@ -12804,6 +12863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 7, y: 0}
 --- !u!65 &1418693798
 BoxCollider:
@@ -13046,6 +13106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 2, y: 4}
 --- !u!65 &1431645985
 BoxCollider:
@@ -13205,6 +13266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 9, y: 1}
 --- !u!65 &1436699639
 BoxCollider:
@@ -13333,6 +13395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 0, y: 6}
 --- !u!65 &1467774270
 BoxCollider:
@@ -13461,6 +13524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 7, y: 6}
 --- !u!65 &1483402658
 BoxCollider:
@@ -13730,6 +13794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 9, y: 7}
 --- !u!65 &1512879207
 BoxCollider:
@@ -13995,6 +14060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 11, y: 1}
 --- !u!65 &1551889056
 BoxCollider:
@@ -14200,6 +14266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 3, y: 5}
 --- !u!65 &1560900779
 BoxCollider:
@@ -14328,6 +14395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 6, y: 1}
 --- !u!65 &1563006937
 BoxCollider:
@@ -14456,6 +14524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 8, y: 3}
 --- !u!65 &1631310189
 BoxCollider:
@@ -14584,6 +14653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 3, y: 1}
 --- !u!65 &1633180889
 BoxCollider:
@@ -15054,6 +15124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 5, y: 1}
 --- !u!65 &1704000642
 BoxCollider:
@@ -15182,6 +15253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 5, y: 5}
 --- !u!65 &1705614559
 BoxCollider:
@@ -15310,6 +15382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 8, y: 5}
 --- !u!65 &1709269797
 BoxCollider:
@@ -15438,6 +15511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 2, y: 1}
 --- !u!65 &1731552006
 BoxCollider:
@@ -15566,6 +15640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 6, y: 4}
 --- !u!65 &1733666615
 BoxCollider:
@@ -15694,6 +15769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 1, y: 6}
 --- !u!65 &1746566628
 BoxCollider:
@@ -15822,6 +15898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 8, y: 7}
 --- !u!65 &1788661947
 BoxCollider:
@@ -16056,6 +16133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 2, y: 7}
 --- !u!65 &1828899334
 BoxCollider:
@@ -16184,6 +16262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 8, y: 0}
 --- !u!65 &1830433398
 BoxCollider:
@@ -16312,6 +16391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 8, y: 4}
 --- !u!65 &1840170362
 BoxCollider:
@@ -16440,6 +16520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 9, y: 4}
 --- !u!65 &1847141989
 BoxCollider:
@@ -16568,6 +16649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 3, y: 3}
 --- !u!65 &1880333916
 BoxCollider:
@@ -16771,6 +16853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 9, y: 0}
 --- !u!65 &1924095255
 BoxCollider:
@@ -16899,6 +16982,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 10, y: 6}
 --- !u!65 &1930867418
 BoxCollider:
@@ -17240,6 +17324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 5, y: 6}
 --- !u!65 &1949250219
 BoxCollider:
@@ -17368,6 +17453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 11, y: 7}
 --- !u!65 &1956627878
 BoxCollider:
@@ -17496,6 +17582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 8, y: 1}
 --- !u!65 &1980028092
 BoxCollider:
@@ -17624,6 +17711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 3, y: 2}
 --- !u!65 &2002967209
 BoxCollider:
@@ -18213,6 +18301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 4, y: 6}
 --- !u!65 &2044647735
 BoxCollider:
@@ -18685,6 +18774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 11, y: 0}
 --- !u!65 &2074973993
 BoxCollider:
@@ -18944,6 +19034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 9, y: 2}
 --- !u!65 &2115420977
 BoxCollider:
@@ -19072,6 +19163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FieldPiece
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 10, y: 3}
 --- !u!65 &2122500333
 BoxCollider:
