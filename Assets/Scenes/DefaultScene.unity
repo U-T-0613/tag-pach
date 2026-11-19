@@ -4547,7 +4547,7 @@ MonoBehaviour:
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
   spotLightMaterial: {fileID: 0}
-  holoMaterial: {fileID: 0}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 10, y: 1}
 --- !u!65 &449916947
 BoxCollider:
@@ -6741,7 +6741,7 @@ MonoBehaviour:
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
   spotLightMaterial: {fileID: 0}
-  holoMaterial: {fileID: 0}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 6, y: 2}
 --- !u!65 &751356649
 BoxCollider:
@@ -10543,7 +10543,7 @@ MonoBehaviour:
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
   spotLightMaterial: {fileID: 0}
-  holoMaterial: {fileID: 0}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 11, y: 3}
 --- !u!65 &1247052895
 BoxCollider:
@@ -15577,7 +15577,7 @@ MonoBehaviour:
   defaultMaterial: {fileID: 2100000, guid: 5279f41a74cb52144821b829ff077aa5, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 1ca02fc47b582b642ac9d91ccd14fd3f, type: 2}
   spotLightMaterial: {fileID: 0}
-  holoMaterial: {fileID: 0}
+  holoMaterial: {fileID: 2100000, guid: 5e005dc7c7542c64e995ab82dd85e1b1, type: 2}
   coordinate: {x: 11, y: 6}
 --- !u!65 &1690522236
 BoxCollider:
