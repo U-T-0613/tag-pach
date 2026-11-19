@@ -334,6 +334,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f38222448288d304ebccd1a8dc53cd2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+  fallHeight: -10
+  respawnDelay: 2
   input: {fileID: 4017418924714245317}
   stateList:
     stateList:
@@ -347,6 +349,8 @@ MonoBehaviour:
       sourceState: {fileID: 11400000, guid: 99cfa97c4bf3d3541a0510a4c423d20a, type: 2}
     - key: smash
       sourceState: {fileID: 11400000, guid: 8b68af04349864d44a739671f48f468f, type: 2}
+    - key: forcePlace
+      sourceState: {fileID: 11400000, guid: c1248157f531209488339d6c21161b89, type: 2}
   initializeStatekey: idle
   fieldLayer:
     serializedVersion: 2
@@ -367,7 +371,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SearchSkill
   settings: {fileID: 11400000, guid: 3acd0a955ae1d81479bd875c8801a2e1, type: 2}
-  fieldRoot: {fileID: 0}
   waveView: {fileID: 7882374565463179035}
 --- !u!54 &8926393357000467467
 Rigidbody:
@@ -394,7 +397,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &1440665179138532477
 CapsuleCollider:
