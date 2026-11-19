@@ -5,9 +5,6 @@ public sealed class ImpactFeedbackPlayer : MonoBehaviour
 {
     public static ImpactFeedbackPlayer Instance { get; private set; }
 
-    [Header("Impact Feedback")]
-    public ImpactFeedbackProfile piecePlacementCharacterProfile;
-
     private void Awake()
     {
         if (Instance != null && Instance != this)
